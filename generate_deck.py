@@ -2,20 +2,20 @@ import hashlib
 import json
 import os
 import re
+import time
 from pathlib import Path
 from google import genai
 from google.genai import types
+from google.genai.errors import APIError
 import genanki
 
 CACHE_FILE = ".card_cache.json"
 OUTPUT_DECK = "neetcode.apkg"
 MODEL_ID = "gemini-3.6-flash"
 
-# Unique 32-bit integer IDs for model and deck
 MODEL_ID_ANKI = 1607392319
 DECK_ID_ANKI = 2059392310
 
-# CSS styling for clean, readable code and card layout
 CARD_CSS = """
 .card {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -107,7 +107,10 @@ ANKI_MODEL = genanki.Model(
 def load_cache() -> dict:
     if os.path.exists(CACHE_FILE):
         with open(CACHE_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
+            try:
+                return json.load(f)
+            except Exception:
+                return {}
     return {}
 
 def save_cache(cache: dict) -> None:
@@ -124,15 +127,30 @@ def extract_metadata_llm(client: genai.Client, problem_name: str, code: str) -> 
     - "space_complexity": Big-O notation (e.g. "O(1)").
     - "category": High-level NeetCode topic (e.g. "Sliding Window", "Two Pointers", "Trees", "Dynamic Programming").
     """
-    response = client.models.generate_content(
-        model=MODEL_ID,
-        contents=[prompt, f"Code:\n{code}"],
-        config=types.GenerateContentConfig(
-            response_mime_type="application/json",
-            temperature=0.2,
-        ),
-    )
-    return json.loads(response.text)
+    
+    max_retries = 5
+    backoff = 10
+
+    for attempt in range(max_retries):
+        try:
+            response = client.models.generate_content(
+                model=MODEL_ID,
+                contents=[prompt, f"Code:\n{code}"],
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    temperature=0.2,
+                ),
+            )
+            return json.loads(response.text)
+        except Exception as e:
+            err_str = str(e)
+            if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
+                print(f"Rate limit hit for '{problem_name}'. Waiting {backoff}s before retry (attempt {attempt + 1}/{max_retries})...")
+                time.sleep(backoff)
+                backoff *= 2
+            else:
+                raise e
+    raise RuntimeError(f"Exceeded max retries for {problem_name}")
 
 def find_solution_files():
     valid_exts = {".py", ".java", ".cpp", ".js", ".ts", ".go"}
@@ -157,7 +175,6 @@ def main():
 
     for path in solutions:
         problem_slug = path.parent.name if path.parent.name != "." else path.stem
-        # Clean folder name (e.g. "0033-search-in-rotated-sorted-array" -> "Search In Rotated Sorted Array")
         problem_name = re.sub(r"^\d+[-_]?", "", problem_slug).replace("-", " ").replace("_", " ").title()
         
         with open(path, "r", encoding="utf-8") as f:
@@ -170,6 +187,9 @@ def main():
             try:
                 metadata = extract_metadata_llm(client, problem_name, code)
                 cache[file_hash] = metadata
+                save_cache(cache)
+                # Respect the 15 RPM limit (~4s between calls)
+                time.sleep(4.2)
             except Exception as e:
                 print(f"Error processing {problem_name}: {e}")
                 continue
@@ -180,7 +200,6 @@ def main():
         complexity_html = f"Time: {metadata.get('time_complexity', 'O(N)')} | Space: {metadata.get('space_complexity', 'O(1)')}"
         escaped_code = code.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
-        # Deterministic GUID ensures Anki preserves study stats on updates
         note_guid = genanki.guid_for(problem_slug)
 
         note = genanki.Note(
