@@ -9,7 +9,7 @@ import genanki
 
 CACHE_FILE = ".card_cache.json"
 OUTPUT_DECK = "neetcode.apkg"
-MODEL_ID = "gemini-2.5-flash"
+MODEL_ID = "gemini-3.6-flash"
 
 # Unique 32-bit integer IDs for model and deck
 MODEL_ID_ANKI = 1607392319
