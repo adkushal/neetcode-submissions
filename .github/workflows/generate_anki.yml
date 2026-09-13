@@ -38,9 +38,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .card_cache.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update card cache [skip ci]" && git push)
-
+          if [ -f .card_cache.json ]; then
+            git add .card_cache.json
+            git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update card cache [skip ci]" && git push)
+          else
+            echo "No cache file generated yet; skipping commit."
+          fi
+          
       - name: Publish Deck Release
         uses: softprops/action-gh-release@v2
         with:
