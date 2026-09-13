@@ -1,1 +1,178 @@
-{}
+{
+  "1bc5157ab455b65bd347daa95bf517dabb99be2c9f097c0bb94538afa9326ca2": {
+    "active_recall_prompts": [
+      "How does hashing file contents using SHA-256 enable idempotent batch processing and prevent redundant LLM API calls?",
+      "Why is a deterministic GUID derived from the problem slug essential when generating Anki notes dynamically?",
+      "How does the directory traversal filter out non-solution files and internal directories safely?"
+    ],
+    "key_intuition": "The script scans source code files, uses SHA-256 hashes to cache structural analysis from Gemini API responses, and automatically compiles formatted Anki decks using genanki. By pinning unique deterministic GUIDs per problem slug, Anki preserves card study statistics across deck regenerations.",
+    "time_complexity": "O(F * S)",
+    "space_complexity": "O(F * S)",
+    "category": "Automation & Tooling"
+  },
+  "9a79fb8231c8b00bfb369599bfd92b46a0ab274d09ccfff1b578b2c8cc458459": {
+    "active_recall_prompts": [
+      "Why do we use a min-heap instead of a max-heap to find the k-th largest element?",
+      "What invariant is maintained regarding the heap size and its elements during each iteration?",
+      "How does the time and space complexity of this min-heap approach compare to the Quickselect algorithm?"
+    ],
+    "key_intuition": "By maintaining a min-heap capped at size k, the smallest element in the heap always represents the k-th largest element processed so far. Whenever the heap exceeds size k, popping the root removes smaller elements that cannot be in the top k, leaving the overall k-th largest element at the root of the heap at the end.",
+    "time_complexity": "O(N log k)",
+    "space_complexity": "O(k)",
+    "category": "Heap / Priority Queue"
+  },
+  "ba776580660153db1999123e3ee7eeb737b5d607ab34a164463f986043a4dee0": {
+    "active_recall_prompts": [
+      "How does iterating strictly forward from index `i` prevent duplicate permutations like `[2, 1]` when `[1, 2]` has already been generated?",
+      "Why must we append a shallow copy (`currset.copy()`) instead of `currset` directly when saving a valid combination?",
+      "How can the upper loop bound `n + 1` be pruned to avoid exploring branches where there aren't enough remaining numbers left to reach size `k`?"
+    ],
+    "key_intuition": "The solution uses depth-first backtracking to construct combinations incrementally while maintaining a strictly increasing element order to prevent permutations. By passing `j + 1` to the subsequent recursive call, we ensure that elements are selected without replacement or reordering. The state vector `currset` is updated in place and backtracked via `.pop()` after fully exploring a decision branch.",
+    "time_complexity": "O(k * C(n, k))",
+    "space_complexity": "O(k)",
+    "category": "Backtracking"
+  },
+  "89db487842ccf450d735d09ca801aa1a069fcf7714a62cdf008fa56b363a1c31": {
+    "active_recall_prompts": [
+      "What traversal orders (preorder, postorder, level-order) can be used to invert a binary tree, and why does standard inorder traversal fail without modification?",
+      "What is the base case for the recursion, and how does the function handle an empty tree or leaf nodes?",
+      "How does the tree's height ($H$) impact the space complexity during the recursive call stack execution?"
+    ],
+    "key_intuition": "Inverting a binary tree requires swapping the left and right child pointers for every node in the tree. By utilizing a recursive traversal (such as postorder DFS), subtrees are processed bottom-up, ensuring that every subtree is inverted before being swapped at its parent level.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Trees"
+  },
+  "321bf610011018f5ebd7ad67613420cb35442559d97ed62adf8ef0ab3c407b7a": {
+    "active_recall_prompts": [
+      "When the array reaches full capacity, why do we double its size during a resize operation rather than increasing it by a fixed amount?",
+      "How does doubling capacity guarantee an amortized time complexity of O(1) for the pushback operation?",
+      "What state invariant holds for the `length` property relative to element indices and total capacity during pushback and popback operations?"
+    ],
+    "key_intuition": "A dynamic array abstracts fixed-size memory by automatically allocating a new array of double the current capacity when full. This geometric expansion strategy ensures that the expensive O(N) reallocation cost occurs infrequently, yielding an amortized O(1) time complexity for pushback while retaining O(1) random access.",
+    "time_complexity": "O(1) amortized for pushback; O(1) for get, set, popback; O(N) for resize",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
+  },
+  "34fa2b64220cb46bd7e96da71b9a4d47705e663201da3ebc031ea376b82a195f": {
+    "active_recall_prompts": [
+      "How does storing metadata (string lengths) before a header delimiter ('#') resolve ambiguity when strings contain special characters?",
+      "How are empty string elements and an empty input list handled by this specific encoding scheme?",
+      "What state invariant allows the decoder to slice the concatenated payload string accurately without scanning for separators inside the payload?"
+    ],
+    "key_intuition": "The core trick is prepending a metadata header containing the length of each string separated by commas, followed by a unique termination delimiter ('#'). By reading the header first, the decoder learns the exact length of every string beforehand, allowing deterministic slicing of the combined payload regardless of the characters inside the strings.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
+  },
+  "cd2947db73b47ee06bc5a1eb635063cc603a247a6411bbf63643ecf7d8975275": {
+    "active_recall_prompts": [
+      "How does a post-order traversal allow us to compute subtree heights and maximum path lengths in a single pass?",
+      "Why do we update the diameter using left_height + right_height, but return max(left_height, right_height) + 1 to the parent?",
+      "What is the base case for an empty subtree, and how does returning 0 align with counting edges instead of nodes?"
+    ],
+    "key_intuition": "The longest path (diameter) passing through any given node as its apex is the sum of the maximum heights of its left and right subtrees. Using a post-order DFS, we can recursively calculate the height of every subtree while simultaneously updating a global maximum diameter at each node in a single bottom-up pass.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(H)",
+    "category": "Trees"
+  },
+  "075e10d9a3ccf5bebdfc540c6f4899b7afd9eb0faa373af5cbea6df2fed637f4": {
+    "active_recall_prompts": [
+      "What are the three distinct structural cases to handle when deleting a node from a BST once the target node is found?",
+      "Why do we replace a target node having two children with its inorder successor (minimum node in the right subtree), and what alternative choice exists?",
+      "How does recursion simplify updating parent-child pointers after deleting a target node?"
+    ],
+    "key_intuition": "Deleting a node in a BST relies on binary search to locate the target node, followed by structural re-linking based on the node's degree. When a node has two children, the BST invariant is preserved by replacing its value with its inorder successor (the minimum node in its right subtree) and recursively deleting that successor.",
+    "time_complexity": "O(H)",
+    "space_complexity": "O(H)",
+    "category": "Trees"
+  },
+  "cbba4d2f5de5879832fd5d764b74f6c54b8896700887372960a96893bf413cd3": {
+    "active_recall_prompts": [
+      "Why does the sorted property of the input array allow us to use a two-pointer approach instead of a hash map or nested loops?",
+      "What invariant guarantees that incrementing left when total < target will not accidentally skip the correct solution pair?",
+      "How does the algorithm handle 1-based indexing compared to standard 0-based indexing when returning the result?"
+    ],
+    "key_intuition": "Since the input array is sorted, we can place pointers at the extreme ends (smallest and largest values) to bound our search space. If the sum of the two pointers is smaller than the target, we must increment the left pointer to increase the sum, and if it is larger, we decrement the right pointer to decrease it. This maintains the invariant that the target pair always lies within the range bounded by the two pointers.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Two Pointers"
+  },
+  "3ef18f02423b7224e58454f887adda836e587d96a0cdb8e5fa4a2c6738ea491f": {
+    "active_recall_prompts": [
+      "How does the sorted property of the input array justify safely incrementing the left pointer or decrementing the right pointer?",
+      "What invariant ensures that no potential target pair is skipped as the two pointers converge?",
+      "How would the space complexity requirement change if the input array were unsorted?"
+    ],
+    "key_intuition": "Since the input array is sorted, placing pointers at both ends allows us to adjust the sum deterministically. Incrementing the left pointer increases the sum while decrementing the right pointer decreases it, allowing us to narrow down the search space in linear time with constant space.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Two Pointers"
+  },
+  "0edc25da0f025aa90d3d8fa4ac47e66803a49e0c857c21cfd8124b70cbe238c4": {
+    "active_recall_prompts": [
+      "What invariant must the hash set maintain relative to the pointers 'left' and 'right' at each iteration?",
+      "How do we determine when the sliding window size exceeds 'k', and what state update is required?",
+      "How does maintaining a set of size at most 'k' guarantee that any duplicate found satisfies the condition abs(i - j) <= k?"
+    ],
+    "key_intuition": "The algorithm maintains a fixed-size sliding window of at most 'k' elements using a hash set for $O(1)$ lookups. As the 'right' pointer expands the window, elements outside the window range ($right - left > k$) are evicted from the set via the 'left' pointer. If an element being added is already in the set, a duplicate within distance 'k' exists.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(min(N, k))",
+    "category": "Sliding Window"
+  },
+  "16b5d19bb7da944f4d6b44fb7eba6255671729cbdf35f05e808c543b0a7a57ec": {
+    "active_recall_prompts": [
+      "How does maintaining a parallel auxiliary stack enable O(1) minimum retrieval during pop operations?",
+      "What invariant must be preserved at the top of the min_stack after every push operation?",
+      "How could space optimization alter the push and pop logic if we only added to min_stack when encountering a value less than or equal to the current minimum?"
+    ],
+    "key_intuition": "The core trick is using an auxiliary stack (min_stack) to track the minimum element at each corresponding depth of the main stack. By keeping the min_stack synchronized with the primary stack, the current minimum is always accessible at the top of min_stack in O(1) time.",
+    "time_complexity": "O(1) per operation",
+    "space_complexity": "O(N)",
+    "category": "Stack"
+  },
+  "587a593c6cd49856b5c21731f5b4b2c53fe2cb0facf279f0dcc36c0a803975e8": {
+    "active_recall_prompts": [
+      "Why do we compare `nums[mid]` against `nums[high]` instead of `nums[low]`?",
+      "What loop invariant ensures that the minimum element is never excluded when setting `high = mid` versus `low = mid + 1`?",
+      "How does this implementation correctly handle an unrotated, strictly increasing array?"
+    ],
+    "key_intuition": "A rotated sorted array consists of two sorted sub-arrays separated by a pivot point, which is the minimum element. By comparing `nums[mid]` to `nums[high]`, we can determine which half contains the pivot drop and discard the strictly sorted portion until `low` and `high` converge on the minimum.",
+    "time_complexity": "O(log N)",
+    "space_complexity": "O(1)",
+    "category": "Binary Search"
+  },
+  "82d7535be29e114c90323a190b9aeaba0ec387103a478ea1fcf2768126473fff": {
+    "active_recall_prompts": [
+      "Why do we use a min-heap of size k instead of a max-heap to track the kth largest element in a stream?",
+      "What state invariant must the min-heap maintain after every element insertion?",
+      "How does maintaining a fixed heap size of k optimize the time complexity of the add operation?"
+    ],
+    "key_intuition": "To track the kth largest element in a stream, maintain a min-heap containing only the k largest elements seen so far. Because the heap contains exactly k elements, the smallest element among them (located at the root) is guaranteed to be the kth largest element overall.",
+    "time_complexity": "O(log k) per add operation, O(N log k) for initialization where N is the length of the initial array",
+    "space_complexity": "O(k)",
+    "category": "Heap / Priority Queue"
+  },
+  "354b078ff0f016af6d35e858b2e44c8c230b676cbd9001bef116803d4865d141": {
+    "active_recall_prompts": [
+      "What fundamental property of a hash set allows us to detect duplicate elements by comparing array lengths?",
+      "How does constructing the set all at once compare to early-returning as soon as an element is found in the set during iteration?",
+      "What are the time and space complexity trade-offs if we sort the array in-place instead of using extra space for a hash set?"
+    ],
+    "key_intuition": "A hash set automatically enforces uniqueness by discarding duplicate values upon insertion. By adding all elements from the array to a hash set, any duplicate values are filtered out. Comparing the final length of the hash set to the original array length determines if duplicate integers existed.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
+  },
+  "b4073978a64b863d006c16bf3e7fdad9fa27d1a9d53f2f0e7fa5e9930e2ce2c9": {
+    "active_recall_prompts": [
+      "How does the step parameter in Python's range(start, stop, step) function allow generating odd numbers without explicit conditional statements?",
+      "What is the behavior and output of create_list_of_odds when given an input of n <= 0?",
+      "How would using a generator expression instead of a list comprehension alter the space complexity of this function?"
+    ],
+    "key_intuition": "The solution leverages Python's built-in range() function with a start index of 1 and a step size of 2 to generate sequence values, naturally filtering for odd numbers. By wrapping this range generator inside a list comprehension, it constructs and returns the filtered array in a single concise operation.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
+  }
+}
