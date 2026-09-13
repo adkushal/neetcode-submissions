@@ -2,9 +2,8 @@ name: Generate Anki Deck
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
   schedule:
-    # Runs at midnight every Sunday
     - cron: '0 0 * * 0'
   workflow_dispatch:
 
@@ -27,7 +26,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install genanki google-genai
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Run Deck Generator
         env:
