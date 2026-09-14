@@ -189,15 +189,14 @@
   },
   "5a11ac4a9dafaf170b7b196457243186dec0b2eaa4e97ac6cc1cdcf12a9dbd6d": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How do you maintain a running sum for a fixed-length window of size k in O(1) time per step?",
+      "How can you optimize the condition 'sum_of / k >= threshold' to avoid floating-point division?",
+      "What loop invariant guarantees that every valid subarray of size k is checked exactly once?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "This problem uses a fixed-size sliding window of length k to track the sum of contiguous elements efficiently without recomputing from scratch. By adding the incoming element at the right pointer and subtracting the outgoing element at the left pointer, each window's average can be evaluated in O(1) time.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Sliding Window"
   },
   "097e44f770ac217c8a96ccdd30d55620dba4542f04c65e02e66966568e262109": {
     "active_recall_prompts": [
@@ -1904,6 +1903,30 @@
     "is_fallback": true
   },
   "aecf8300042524409b5b6f3f65d22d56ae2b16d7626cbfd3597195f83a7884a4": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "95c2e8d54d3afa53a2774053c72fa266c9c2d1e2f20bacb9fdbf9f8d637a7b3f": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "136b7165bd408933a72ab21d9a016f5587763a55ee86d53cbeaa07367d14551e": {
     "active_recall_prompts": [
       "What is the optimal data structure or pattern?",
       "What invariant or base case must be maintained?",
