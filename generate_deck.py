@@ -6,7 +6,6 @@ import time
 from pathlib import Path
 from google import genai
 from google.genai import types
-from google.genai.errors import APIError
 import genanki
 
 CACHE_FILE = ".card_cache.json"
@@ -121,15 +120,15 @@ def extract_metadata_llm(client: genai.Client, problem_name: str, code: str) -> 
     prompt = f"""
     Analyze this code solution for the problem "{problem_name}".
     Return a strictly valid JSON object with the following fields:
-    - "active_recall_prompts": A list of 3 bullet questions testing high-level algorithmic pattern recognition, edge cases, and state invariants (e.g. "How do we identify the boundary?").
+    - "active_recall_prompts": A list of 3 bullet questions testing high-level algorithmic pattern recognition, edge cases, and state invariants.
     - "key_intuition": A 2-3 sentence summary explaining the core algorithmic trick and invariant.
     - "time_complexity": Big-O notation (e.g. "O(N log N)").
     - "space_complexity": Big-O notation (e.g. "O(1)").
     - "category": High-level NeetCode topic (e.g. "Sliding Window", "Two Pointers", "Trees", "Dynamic Programming").
     """
     
-    max_retries = 5
-    backoff = 10
+    max_retries = 3
+    backoff = 15
 
     for attempt in range(max_retries):
         try:
@@ -145,12 +144,27 @@ def extract_metadata_llm(client: genai.Client, problem_name: str, code: str) -> 
         except Exception as e:
             err_str = str(e)
             if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
-                print(f"Rate limit hit for '{problem_name}'. Waiting {backoff}s before retry (attempt {attempt + 1}/{max_retries})...")
+                print(f"Rate limit hit for '{problem_name}'. Waiting {backoff}s before retry ({attempt + 1}/{max_retries})...")
                 time.sleep(backoff)
-                backoff *= 2
+                backoff += 15
             else:
-                raise e
-    raise RuntimeError(f"Exceeded max retries for {problem_name}")
+                print(f"Non-quota API error on {problem_name}: {e}")
+                break
+
+    # Fallback if quota is exhausted or retries fail
+    print(f"Using fallback summary for {problem_name}")
+    return {
+        "active_recall_prompts": [
+            "What is the optimal data structure or pattern?",
+            "What invariant or base case must be maintained?",
+            "What are the target Time and Space complexities?"
+        ],
+        "key_intuition": "Review your implementation below for key invariants and edge cases.",
+        "time_complexity": "See Implementation",
+        "space_complexity": "See Implementation",
+        "category": "Algorithms",
+        "is_fallback": True
+    }
 
 def find_solution_files():
     valid_exts = {".py", ".java", ".cpp", ".js", ".ts", ".go"}
@@ -182,16 +196,17 @@ def main():
 
         file_hash = hashlib.sha256(code.encode("utf-8")).hexdigest()
 
-        if file_hash not in cache:
+        # If not cached or if previously saved as a fallback, attempt extraction
+        if file_hash not in cache or cache[file_hash].get("is_fallback"):
             print(f"Generating summary for: {problem_name}...")
             try:
                 metadata = extract_metadata_llm(client, problem_name, code)
                 cache[file_hash] = metadata
                 save_cache(cache)
-                # Respect the 15 RPM limit (~4s between calls)
-                time.sleep(4.2)
+                # 6-second sleep ensures we stay comfortably under 10 RPM
+                time.sleep(6.0)
             except Exception as e:
-                print(f"Error processing {problem_name}: {e}")
+                print(f"Skipping {problem_name} due to unexpected error: {e}")
                 continue
         else:
             metadata = cache[file_hash]
