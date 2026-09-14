@@ -174,5 +174,1745 @@
     "time_complexity": "O(N)",
     "space_complexity": "O(N)",
     "category": "Arrays & Hashing"
+  },
+  "aa59560bdecdb090041f638d15ebc738f8b0bf8b792679cfd3595c62801aa7aa": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "5a11ac4a9dafaf170b7b196457243186dec0b2eaa4e97ac6cc1cdcf12a9dbd6d": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "097e44f770ac217c8a96ccdd30d55620dba4542f04c65e02e66966568e262109": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "9667ba3c9904995dd1237baea9afda3487770ab2365733f9a129b8c6ce2b6ed8": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "1256f5001de71460b90370faa90789088501d631df5dff605a59cd947b45a71d": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "55d0e6a894878e3641d7e4aaa714a8cf39463e2996c5aae157e06fea6d87e1e6": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "94c8ff61df4c0c9277f67298e715fd0ea79709fd61e2c9e6f62d72b7fe17dfba": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "c46df5ada094d3ee750106e46991e4b9bda0ce43f95f1eda3907b617d9dfffa4": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "838d2c48fb8e6eec247eb568509531030b9baa1b2360b78d84025ca354f63a51": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "61280a0a766218093da726855465b47def663f96673b261ebe65efceb3517992": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "64a7a3a31682b767dabf7e17dd2bcdbcba5d600b1f756159d3db3a1d591428eb": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "74909bbf10df0a72f1c2d4fa496633e6e8916b53a8b953f42d04efb0e2130984": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "ff154775e8955664d8ed9aeecde5eac12064df92db2f7aa61bb668fd6e3407f4": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "8aa48be7988bd68062b46526f9cea9c0cd1d483c47f172d0fffabbc3ebeb9731": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "46e5105d6e97997651954566c6fe6f62a21fdd63df11345a9b1a31dd0fc51834": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "b9e67b6049b4922727583f3777a21737ce5187a4e438031a1729d4a60445a73e": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "7de67bc2f7396a91bf95b5aea07f597fb112aaaf47460a16e0eac727acd535c4": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "2d82ecfcb768d2eb1e64f14771d3b0acb79bdd4c7fe9d63ee78a6e9fa1cb4b0a": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "4921b2f26b74736e7b05b7b9c4f69a1544baeffa068100763dc5b6c1b2aabed6": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "776e526fca2411edb56eb867bf386585117e54350581070cfff6ccff972785b8": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "beefca8f373886d617624a61a89a8828fe936cc185e2e7814503eca8c7d87380": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "25be25e290e1ac245cdf72e8350df0e9439a1c320f31ae36ebbed85884afb6e5": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "e504cfb6ddff930002f2e7bda545f339b59f553f0ae8b57e7e65b8be5411a10b": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "89122fba8bef2629bcd50f8f691a0861fa0a27996837e623611681d040185993": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "d67738dedd15a159f5bb2907f3c2c5ce886d395e8e6d20f1c23152803953bf54": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "07c04d4d7e0c3fdbc5005df01aece8b8a2da912e1ec17cce57266a3b883e8967": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "5aa5f39974dbd2fd762dd411cf7bb2f16bb821ef03631f1a56350154a09e7b00": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "665324620c51a94c0c69884293d7b91ab1976733d15f4dda66e93e40e55e95e4": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "a843a5d792e134be68c4b85edec38fa134f78be2960ca7312a5bdac3de8d78bb": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "220ad77cfdaa0e5dab2aaf12754cd7f282a857434d0dbf342619d265fb787ced": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "bca26ad46f8be6f193babaf9c9d0976dad8bc58f04e05cb7ec1af3dce62a1b5f": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "2bdd71cda715ca72abd41745b9f6271d0a56ef25aee316991e1afb4911872a46": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "3b20a4359f626601eea239c4a7caa52dbce9caa07943568e413599cb93abdaff": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "3ccea2699ee95e5d966c100f0d4673f06a999dce97db20feef5748be961e5326": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "c3519e5ac868e5f3559f9596aec60e88eda1ca9a00a2ae9159890aa4fdbb486f": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "1ada4cbf627c332baaa890647b3f08d47a17c22b339771689692a68d7b384231": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "f989f007397c9863cc8510c61ff5425a05d3a9b9c9e90ecd64f89eb33ced5e79": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "6f153114028e014b2c3b7b44103199bcc626764fbeed296d3f6944cc971f3ee6": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "cdb96f0ae201df9301dfd7fa57f91e9c8784def70b44ef874ca5d0932b08e557": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "e6d1d0c6fd2abf3411a76b9482206239daf8f28571438afc0885560d67165936": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "e903e2382ec0a532e8f0a687cda54059e8b79b529445c443484100fcac773ccd": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "3d6959938e555b8a2be3f43501447241b30383a6d4cd2e6dfffc7e28bddbcae6": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "f0d04a90f027c6b6260b7cc14311ed098b86d94512702641130f2e66a431d731": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "a90b7f9c0854111794f38648309146f7a05e4575bcc6789f1b369e0ea179f6d5": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "492dd9ea8f0c2c05b027c7349d17b0ddb312ca927faf1ad55356abfc32c4c46a": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "df9e5e05e4c86d9222d4abab9162c2d91e5eb0863c22c57fe1b3a1b5842d8a28": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "642760fa00ad013519ab5d8b6d3c3ecfbdbf134c9c80588a7b172c97099ef89f": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "335ce514b9a5444abf0a277660a2fa45faee092704a995ff6a3e34a778a43427": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "c99424570376a39f6307592918dbece3cff90b540e522463464960bcf452c7a9": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "4a1a1525052e5d920fed5580d9061ed1c37159abd34f0c5094e397a13529f2fd": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "a68bf7cdba6ff4442135d89987fc54d1738a314b9c02fe00765f2a5b1bd58b69": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "5c728c2725785210d7b7349af19313fb0b91331da19d44dad46c4050a5fc4ac9": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "54ab8564a85553b6fcd6926ba20adf3d63d2739159da452df4b322b908889b26": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "c89f18233eef1e56067dc697bb1f172a6d1dcad5a6fbcab4ce89f99f1fcc5226": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "4bb3b29cef6cf9ac7ad39eeaf27100b94b2ce12b8cd5e1c969a81b6a18628067": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "7357b95c3e0cdb238af5244347b4807517e734750e5ac1e0801a4c979fac25ba": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "36d17bc1a0de9fbbb88a4399e9ef181ab6988c1001fe3045f0b1d405d406c90e": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "21df5ac07372e68911a5600788201ec72c142a5f806801227a26f7c51b6bae10": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "09b30c101586ed3a7e409fdc49523cf513dd6217724f905d988fc2aa8de51d63": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "8f1795be1134a839815ded2af38b4d517b5d3cb5ca3c8c9a7c4661a548a4afd8": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "6e013663d14b2d91f5356774e61d60a75d17386d0235bb2dcb983ae82c852909": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "e3996dc6e12e3d9ddd4030a92ebf8e7f487dd670f2ef1d1bf7953888a7088655": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "0aeb8173cacce28333c7ab0a785173aa5556af360c0ba8a1320c8eac40bbb8cc": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "8acda34a21258bd15b3539cfe2bbf98a2297b6ede93de85b696b42e6b2c72827": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "b3046ba848f657a49d4636f572378e7ad37b69b1be28468f4ef21cb7e1276601": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "1763f7578f0219dbd702b3ad88f6ad8a623dee2a33b148b916ed7c87dc808a99": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "b124f12f413e860ce37ec240a48e18bba1c1d412e9ab5e4f13fbc91f694617a8": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "3f7cb300b916804b6d76127760afc033d338ed6ce8bfc0be4575ac49eef4f2f0": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "548f5da671993b758c8fec269214379ca65a74bf26c4bee591c8734838657eab": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "71dc8070df4c747c0a9f3da83b62a47f24b3ae89226484d796dcc781178cce5d": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "cffcd247fd7d51c06e6664d635c20879115b6bb792ba238f184027879f111e5b": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "899bdd1536f6aef9f6bf4ce949f7bc563842ed915ece172a54f81ce3f64b2c96": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "b0afd214a94f7e1f9f72bdafb3dd74ba79f37d170caeda3bbd139d9ca97c551b": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "1c654bf56c64c22fec9886d154eff8b98fc5db38afcffaeadbeff36c26b97c49": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "50e01a025ae816a5a16d30d8121c5f3146dc374d4e4bbd46b3eb5f87c1f9bb54": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "28254333f39fc69ab28c168ed1655742cc579b17ecd47e3946a72a5ea9fee451": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "7fce55196edb0063945d8dcfca8c2b34a53c342ca9414bfa6cc2dd309166dd25": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "92354dfbb707b7d41f02c24558117aa31e615ffe45a76334c37ab453c863347c": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "817e9a2e7c2f9c51665c7c0b1dfd01917bc303ae12747e66701b28c3ba1d2c76": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "d4c16e93fd2a08f23718a5ceae5530738bf7a123811eff7a875e4ec7ff49d8a4": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "6fc0f7295c03259cb7f028713b8af62ee15742ccd04fd1b73086facab9ba198c": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "37f12da4c8e789922c93281efc3cf5671086c390dd56af3b2d26527d11740546": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "9554b3bb343bba9bc7bc80ebe3dc829ac56055e7e8f3e7d37608f6b343b05cce": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "9782e75a030f597a59347dc42783f7241285196880f43f964f32edae84fe5925": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "3bacaf87472469349071cd62119d2f4aedaa0c6101dd9c49ffcbc80c023fa35a": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "b62aab3ab998a43929207bceac9108fa71582db8d00e9e078b12ece7535f97ec": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "cad4702cf539a024417f9e4185d4cdb650ec638554888544c17a829ac731498f": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "e096aa14388d32dd0e5374069d31d33d64ade844ecc69227e759527f1c544c52": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "555387722c7bdd129033a9391c82cf7ff9cb1e2fea171caad811a6fdddd48893": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "1d06d8f4099cd7558751f862105d50c30109d6745b6c059ab41054921de8e2ae": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "33428754386199afd393291856a520e1fdcdcbb01bc8973193988b4ee7d4d37f": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "f30e5e332c949f797a36000fa6e2826da70077ec99a7ae21ae49f4f847d29471": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "6c9f36fc65f8e95d741f8392bcaa1feefae906508be4d349a717ceab547e65f4": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "95a1c3dfb66e1df6b268f5f0cc3803df1899e5ceb225cad0af1dc3d07fa63838": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "fb3c47ca9c20e4ba41f7077807c304bbc71a212e3a5c9c39cf6269fec7f4167a": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "28a0851bc9d5a3f5d99a260d8f2b281e27a3b5657a7c0fb7bcc55c7b7a7629a2": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "d3c2b3a680820afae945666830ac07e48ac69d2dc54a36671d8306464efc48d6": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "cbfc30d8ff1a381e9a1f9d0e4e37f367f904abeb2e495b924656cd5a54b69912": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "a46e4a0933a9d60c513f72d42093b93a1284f20395a7c6b325089b549674e4c7": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "8954cf5ccc62b14fc80ecadf584c5c28451f9fd853b304e3b63d0b8bed2c0e6f": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "844fce89913cbf5aca3ce2a9711105d35dc6e313fd8b05fab7e033a10fa0817c": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "4baa6d8d5d916a02f10f7d2d4d2ccc685166aa81c822566b483e28fe19e84a15": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "d669ad3f8011e9ea829ff36a8e83114d65a0e3be4d6795892a583b954f3b679f": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "81a29959e29e9a3450f74a4d4a9de8b99807d9b74c05781f20bd3d1c12522bf2": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "4668e6b24e952822d036979abf5cccd761779a070938dbe9b9cbf761cafec0a7": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "eb9b9c7c2cdaa5453e5abc9e8e66a00fb621a496449b9604aae0924ccff8ee84": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "4955dae07a60024de65c0fc674b6d3f5d39fd6c18eb42301f9917375affac4ad": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "c0842622e98fc704e4162ab4def2893f55772e9631afedf7cc3b9699bb6d6340": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "17c90ab41013967278da9854ca80320f918af19ba2fd916cf37c3138105055a4": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "8388631ccc294a5f9a5a13a8b20ef329b1176aa49a8ca345b8195fd8a2405f79": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "1c2fa29b2aea4ad5fa5455bb01020d9eda680247539cb98a77fa21d6e6b413a0": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "46ab1941af5ff77420230a0702edfe1b70fd67c2a44b5521dd23a0cb60d53d09": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "b37f51661b43fa21f831dde980db5b7c45c06cc857309e3ca08a47dd42573363": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "ac0997fdedec82d9c177ac2a5eecb8537b83a8f1399cbec1fcf519ce9cdcd787": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "c8d3b6a0366bb0588f4f63da3428cd9c6a2f8b7bc093a6d077ee191003384538": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "c568321e305c4c685436f03b70e593d0a1dbe786b4eb871f0c7ee5c9983e6bfb": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "2c1b45f6bc8eda255cd8009c2696881e74c7e8da51e972ff18a1d83b48f52595": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "30329656e9226401f3147e71824ad9999ccccc072a9e467a073a0f28007da17d": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "5f7ba6fb0b9c36a97d7bb72efb5814801e01d74ae3b117f1d6281b5953ce9fc5": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "33e221ff633396cb67bcf7d27b7d301c33021b386fc4609b6ba6d8fa0cf24d6a": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "be254373b9da41cdf6d18cac1e1864e12340c3948526c7733cf387dab0cd8d9a": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "e354e444b88089974998a8c4747b75e81c1587a156272df8eac05d5de36da2f2": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "47e2326572325b9011bd241e62a3364e7c566b8b545c386a2bafe0a7e05ca3a6": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "55773ea01824023e627c5ef729e37b687c9b2533c94d48fce1e1f562c91ee0c8": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "fef4c7920362a04adae8edfdd7d1a9aad3b7c5bdc8ba015d06f3dc547bfd71b2": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "12d9e5d866d8b861aec3ab034e37fc5b8e69c020651bf396ab5a0cd23a857c32": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "2593db80b84a3ef80b1e0d1b6e283526b8ad198a8afbc3c256bda5c1ec6e9383": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "7c62abc54f354d362f8fa71ab7c14f710c9d5c477e40463eb6995b9451f5ae06": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "15819c73aa1217dcb9faa619b6217c1a7a25dd845ec47f24da72ab0807cb9749": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "0a35ba7532cfdbfa3ad298c7589fa0ca73f9975b47291410f004a86bad6116be": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "ec4552e6ce50841e354a1a4a516e1646de307ad0d0428d06e691b3242eb02e67": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "785b845dd572e960a8ed1586e975568726ed89459a90897930fa3eb170d7040f": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "069b394ccf774034d2b117609289ea8351bebb9341a0ab8bab07e8b2b8090a41": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "98d6d8e26e12e1b86c52e33f67f320b8cf0cef26f1effe99b8fd053c2f640fdb": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "4d305075781444a3b59f23497592497ff1b09d8a3b6d5dcd6c1c6d9a9694a086": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "72cd61bc74e41c125cc486523e350d39e8cdbbbd2fcb418ac9674fb0c6255d92": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "2353ad8251ba12c01b31d9261e64f5afb787d9440f3e55930194af723193c60b": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "2a3f0f7c7f2411d5d325d975c59905568993bf33e6db5490b64e3e9048aa5346": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "d745c09dbac48560945c264ce281830125f5dbf06250cf250e728b9cfb8f0bb9": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "6d08178f232c65db2f2c1c1139a4b1625b282dbba282c8b6248955ce42a043da": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "2200497054f7cf74347170de1fa09f148788a3bcb3e377b9151c71571ecb79da": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "bef1e8dd937d03449ca0a111282169d9d39313cbc406a7e2df56fb6997a52a96": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "f89d16ecdbdc1dec86c3a5d09d20c2036115473d2a2fedc1dfe92d732e5415ef": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "fe727942f1d04fd364d2dfa89cf9c1207900e7421d8b9b0fee7ccf2900ac4e8c": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "aecf8300042524409b5b6f3f65d22d56ae2b16d7626cbfd3597195f83a7884a4": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
   }
 }
