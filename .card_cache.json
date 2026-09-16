@@ -980,51 +980,47 @@
   },
   "3f7cb300b916804b6d76127760afc033d338ed6ce8bfc0be4575ac49eef4f2f0": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is binary search applicable to finding the minimum eating speed k, and what monotonic property must the helper evaluation function satisfy?",
+      "Is sorting the piles array strictly necessary for this Binary Search on Answer approach, and how does it affect time complexity?",
+      "When check_hours_res >= 0 (i.e., hours_eating <= h), why is high set to mid rather than mid - 1?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The total hours required to eat all bananas is monotonically decreasing with respect to the eating speed k. This monotonicity allows us to use Binary Search on Answer within the range [1, max(piles)] to locate the minimal speed k that satisfies the hour constraint h.",
+    "time_complexity": "O(N log(max(P)))",
+    "space_complexity": "O(1)",
+    "category": "Binary Search"
   },
   "548f5da671993b758c8fec269214379ca65a74bf26c4bee591c8734838657eab": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does maintaining a fixed window size equal to len(s1) simplify checking for a permutation in s2?",
+      "Why does comparing two frequency dictionaries in Python take O(1) time in this specific problem context?",
+      "How could you optimize this solution using a 'matches' integer count to avoid comparing the full hash maps on every iteration?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Any permutation of s1 must have the exact same length and character frequency distribution as s1. By sliding a fixed-size window of length len(s1) over s2, we can continuously update character counts and check if the current window matches the frequency map of s1.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Sliding Window"
   },
   "71dc8070df4c747c0a9f3da83b62a47f24b3ae89226484d796dcc781178cce5d": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is a doubly linked list preferred over a singly linked list for implementing an LRU Cache alongside a hash map?",
+      "How do explicit head and tail sentinel (dummy) nodes simplify the node addition and deletion logic compared to manual null checks?",
+      "What edge cases arise when updating a key that already exists versus inserting a new key when the cache is at maximum capacity?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "An LRU Cache combines a Hash Map and a Doubly Linked List to achieve O(1) time complexity for both `get` and `put` operations. The Hash Map provides O(1) key-to-node access, while the Doubly Linked List maintains the access order, allowing O(1) removal of the least recently used node (head) and addition of the most recently used node (tail).",
+    "time_complexity": "O(1) for both get and put operations",
+    "space_complexity": "O(C) where C is the capacity of the cache",
+    "category": "Linked List"
   },
   "cffcd247fd7d51c06e6664d635c20879115b6bb792ba238f184027879f111e5b": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How do you separate nodes of the current level from newly enqueued child nodes of the next level during BFS?",
+      "What edge case should be handled before initializing the queue in binary tree level order traversal?",
+      "What is the maximum number of nodes the queue can hold at any point, and how does that relate to space complexity?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Level order traversal processes nodes layer by layer using Breadth-First Search (BFS) with a FIFO queue. Capturing the length of the queue (`level_size`) at the start of each level loop ensures that only the nodes at the current depth are processed in the inner loop while enqueuing child nodes for the subsequent depth level.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Trees"
   },
   "899bdd1536f6aef9f6bf4ce949f7bc563842ed915ece172a54f81ce3f64b2c96": {
     "active_recall_prompts": [
@@ -1040,39 +1036,36 @@
   },
   "b0afd214a94f7e1f9f72bdafb3dd74ba79f37d170caeda3bbd139d9ca97c551b": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does level-order traversal (BFS) guarantee that the last node processed in a level loop corresponds to the rightmost visible node?",
+      "How does this BFS approach naturally handle cases where the left subtree is deeper than the right subtree?",
+      "How could you alter the traversal order if you wanted to solve this problem using Depth-First Search (DFS) instead of BFS?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Perform a level-order traversal (BFS) using a queue to process the binary tree level by level. By adding left children before right children to the queue, the last node popped during a level's iteration is guaranteed to be the rightmost visible node at that depth.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Trees"
   },
   "1c654bf56c64c22fec9886d154eff8b98fc5db38afcffaeadbeff36c26b97c49": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does the index relationship ans[i] == ans[i + n] == nums[i] define the invariant needed to build the concatenated array?",
+      "How does Python's `+` operator handle list concatenation in terms of memory allocation and copying?",
+      "What are the edge cases regarding array size, and how does the space allocation scale with the length of `nums`?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "To construct an array of length `2n` from an array `nums` of length `n`, each element at index `i` must be duplicated at index `i + n`. In Python, list addition (`nums + nums`) automatically allocates memory for a new list of size `2n` and sequentially copies the elements twice, maintaining the invariant `ans[i % n] == nums[i % n]`.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "50e01a025ae816a5a16d30d8121c5f3146dc374d4e4bbd46b3eb5f87c1f9bb54": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does offset-based indexing allow populating both halves of the concatenated array in a single pass?",
+      "What are the space complexity implications of creating a new output array versus extending an array in-place?",
+      "Does the simultaneous assignment `ans[i] = ans[i + size] = num` preserve ordering and correctly handle single-element arrays?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "To concatenate an array of length N with itself, pre-allocate a result array of size 2N and populate both halves simultaneously. By assigning the element at index i to both `ans[i]` and `ans[i + N]` in a single pass, we maintain the invariant that the second half mirrors the first half.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "28254333f39fc69ab28c168ed1655742cc579b17ecd47e3946a72a5ea9fee451": {
     "active_recall_prompts": [
@@ -1088,15 +1081,14 @@
   },
   "7fce55196edb0063945d8dcfca8c2b34a53c342ca9414bfa6cc2dd309166dd25": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does inserting the current element at every possible index of smaller sub-permutations guarantee that all unique permutations are generated?",
+      "What is the maximum recursion depth reached by the call stack, and what is its impact on auxiliary space complexity?",
+      "How would you modify this bottom-up recursive approach to handle inputs with duplicate elements without producing duplicate permutations?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The algorithm builds permutations recursively from right to left by solving the subproblem for `nums[i+1:]` first. It then constructs all permutations for `nums[i:]` by inserting `nums[i]` into every possible index (from `0` to `len(p)`) of each permutation `p` returned by the recursive call.",
+    "time_complexity": "O(N * N!)",
+    "space_complexity": "O(N * N!)",
+    "category": "Backtracking"
   },
   "92354dfbb707b7d41f02c24558117aa31e615ffe45a76334c37ab453c863347c": {
     "active_recall_prompts": [
@@ -1124,15 +1116,14 @@
   },
   "d4c16e93fd2a08f23718a5ceae5530738bf7a123811eff7a875e4ec7ff49d8a4": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How do you simulate a Max-Heap in Python using the standard library's `heapq` module?",
+      "Why is using a priority queue better than re-sorting the array after every stone collision?",
+      "What edge case occurs when all remaining stones are of equal weight, and how does the implementation handle an empty heap at the end?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "To efficiently process the two largest stones at each step, we use a Max-Heap to dynamically maintain sorted order. Negating the values allows Python's min-heap implementation to function as a max-heap, guaranteeing $O(\\log N)$ pops and pushes per round.",
+    "time_complexity": "O(N log N)",
+    "space_complexity": "O(N)",
+    "category": "Heap / Priority Queue"
   },
   "6fc0f7295c03259cb7f028713b8af62ee15742ccd04fd1b73086facab9ba198c": {
     "active_recall_prompts": [
@@ -1927,6 +1918,30 @@
     "is_fallback": true
   },
   "136b7165bd408933a72ab21d9a016f5587763a55ee86d53cbeaa07367d14551e": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "b4b038299b1cb3773a1d0f28b1ed5803643402f3fe47d4a6d9d4936935dff90e": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "595788ecfdd6739ee887c92cff633a1b840ad8b33d72130603af95b4fa32bf2c": {
     "active_recall_prompts": [
       "What is the optimal data structure or pattern?",
       "What invariant or base case must be maintained?",
