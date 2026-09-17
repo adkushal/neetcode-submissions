@@ -200,15 +200,14 @@
   },
   "097e44f770ac217c8a96ccdd30d55620dba4542f04c65e02e66966568e262109": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What is the branching factor of the decision tree at each step, and how does it depend on the specific digits in the input?",
+      "Why is the explicit backtracking step `currset.pop()` necessary after returning from the recursive call?",
+      "How does the code handle the edge case where `digits` is an empty string?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The core intuition is to build letter combinations depth-first, where each index in the input string represents a level in the recursion tree. For each digit at index `i`, we iterate through its mapping, append a letter to the working combination `currset`, recursively advance to index `i+1`, and backtrack by popping the letter to try alternative choices.",
+    "time_complexity": "O(4^N * N)",
+    "space_complexity": "O(N)",
+    "category": "Backtracking"
   },
   "9667ba3c9904995dd1237baea9afda3487770ab2365733f9a129b8c6ce2b6ed8": {
     "active_recall_prompts": [
@@ -224,15 +223,14 @@
   },
   "1256f5001de71460b90370faa90789088501d631df5dff605a59cd947b45a71d": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What invariant do the 'forward' and 'backward' arrays maintain at any index i relative to the original array?",
+      "How does computing prefix and suffix products separately allow us to solve the problem without using the division operator?",
+      "How can you optimize this O(N) extra space solution to O(1) auxiliary space using only the output array?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The total product of an array excluding the element at index i is equal to the product of all elements before index i multiplied by the product of all elements after index i. By precomputing cumulative prefix products from left to right and suffix products from right to left, the result for each index can be calculated in O(1) time without resorting to division.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "55d0e6a894878e3641d7e4aaa714a8cf39463e2996c5aae157e06fea6d87e1e6": {
     "active_recall_prompts": [
@@ -1942,6 +1940,18 @@
     "is_fallback": true
   },
   "595788ecfdd6739ee887c92cff633a1b840ad8b33d72130603af95b4fa32bf2c": {
+    "active_recall_prompts": [
+      "What is the optimal data structure or pattern?",
+      "What invariant or base case must be maintained?",
+      "What are the target Time and Space complexities?"
+    ],
+    "key_intuition": "Review your implementation below for key invariants and edge cases.",
+    "time_complexity": "See Implementation",
+    "space_complexity": "See Implementation",
+    "category": "Algorithms",
+    "is_fallback": true
+  },
+  "6b7617e8060a9e25377400a4ca2050709ed8de88649342fe8c0668bf33cdaeec": {
     "active_recall_prompts": [
       "What is the optimal data structure or pattern?",
       "What invariant or base case must be maintained?",
