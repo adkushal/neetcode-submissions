@@ -246,15 +246,14 @@
   },
   "94c8ff61df4c0c9277f67298e715fd0ea79709fd61e2c9e6f62d72b7fe17dfba": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How do prefix and suffix products allow us to calculate the product of an array excluding the current element without using division?",
+      "How can you optimize the auxiliary space complexity of this approach from O(N) to O(1) extra space (excluding the output array)?",
+      "How does this prefix/suffix product algorithm implicitly handle edge cases involving one or more zeros in the input array?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The product of all elements except the one at index i is equal to the product of all elements to its left multiplied by the product of all elements to its right. By computing the running prefix products from left to right and running suffix products from right to left, each position's answer can be calculated in O(1) time without using the division operator.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "c46df5ada094d3ee750106e46991e4b9bda0ce43f95f1eda3907b617d9dfffa4": {
     "active_recall_prompts": [
@@ -270,15 +269,14 @@
   },
   "838d2c48fb8e6eec247eb568509531030b9baa1b2360b78d84025ca354f63a51": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does the wildcard character '.' transform a standard deterministic Trie search into a non-deterministic / DFS search?",
+      "What is the worst-case time complexity of the `search` operation, and what word pattern triggers it?",
+      "What base cases must be handled in the DFS function to properly terminate and return whether a valid word end has been reached?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The core data structure is a Trie (Prefix Tree), which allows efficient prefix matching and character-by-character validation. To support the wildcard character '.', the search uses Depth-First Search (DFS); when a '.' is encountered, it branches recursively into all available child nodes at the current Trie depth.",
+    "time_complexity": "O(M) for addWord; O(26^M) worst-case for search with '.' wildcards, where M is the length of the word.",
+    "space_complexity": "O(N * M) total Trie space to store N words of average length M; O(M) auxiliary stack space for DFS recursion during search.",
+    "category": "Tries"
   },
   "61280a0a766218093da726855465b47def663f96673b261ebe65efceb3517992": {
     "active_recall_prompts": [
@@ -306,27 +304,25 @@
   },
   "74909bbf10df0a72f1c2d4fa496633e6e8916b53a8b953f42d04efb0e2130984": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What condition triggers updating the left (buy) pointer to the current right (sell) pointer position?",
+      "Why can we safely skip checking any intermediate prices once a new lower price is encountered at the right pointer?",
+      "How does the algorithm handle edge cases like a strictly decreasing price array (e.g., [5, 4, 3, 2, 1])?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "To maximize profit, we want to buy at the lowest price possible before selling at a higher future price. By using a sliding window, the left pointer tracks the lowest buying price seen so far while the right pointer iterates through potential selling days. If we encounter a price lower than our current buying price, we immediately shift our left pointer there, as it guarantees a better baseline for all future selling opportunities.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Sliding Window"
   },
   "ff154775e8955664d8ed9aeecde5eac12064df92db2f7aa61bb668fd6e3407f4": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What state invariant must be passed down to child nodes during the depth-first traversal?",
+      "Why is a top-down DFS approach ideal for this problem compared to a bottom-up subproblem aggregation?",
+      "How does the shape of the binary tree affect the space complexity of the recursive stack?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "A node is 'good' if its value is greater than or equal to the maximum node value on the path from the root to itself. By executing a depth-first search while maintaining a running maximum value along the current path, each node can determine if it is 'good' in O(1) time before propagating the updated maximum down to its children.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(H)",
+    "category": "Trees"
   },
   "8aa48be7988bd68062b46526f9cea9c0cd1d483c47f172d0fffabbc3ebeb9731": {
     "active_recall_prompts": [
@@ -342,75 +338,69 @@
   },
   "46e5105d6e97997651954566c6fe6f62a21fdd63df11345a9b1a31dd0fc51834": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What invariant does the `hashMap` maintain at the beginning of each iteration `i` regarding the elements processed so far?",
+      "Why is it important to check if `localTarget` exists in `hashMap` before adding `num` to `hashMap`?",
+      "How does this implementation correctly handle duplicate elements when the target is formed by two identical numbers (e.g., `nums = [3, 3]`, `target = 6`)?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The core trick is using a hash map to trade space for time, converting the pair-search problem into constant-time lookups for each element's complement (`target - num`). By populating the hash map incrementally during iteration, we guarantee that we only match the current element with previously seen elements without using the same element twice.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "b9e67b6049b4922727583f3777a21737ce5187a4e438031a1729d4a60445a73e": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why must we check if the complement exists in the hash map before inserting the current number into it?",
+      "What happens when the array contains duplicate values that sum up to the target (e.g., nums = [3, 3], target = 6), and how does the hash map handle them?",
+      "How does using a hash map compare to a sorting plus two-pointer strategy in terms of time complexity and preserving original array indices?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Instead of using a nested loop to find pairs summing to the target, we use a hash map to look up the required complement (target - num) in O(1) time. As we iterate through the array, the hash map maintains an invariant of storing all previously seen elements and their corresponding indices.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "7de67bc2f7396a91bf95b5aea07f597fb112aaaf47460a16e0eac727acd535c4": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does using a hash map reduce the search time for the complement compared to a brute-force approach?",
+      "Why is it beneficial to check for the complement in the hash map before inserting the current element?",
+      "How does this single-pass approach naturally handle duplicate values in the input array when they form a valid pair?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Instead of using a nested loop to check every pair, we leverage a hash map to look up the required complement (target - num) in O(1) average time. As we iterate through the array, we maintain the invariant that the hash map contains all previously visited numbers and their indices, enabling a single-pass solution.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "2d82ecfcb768d2eb1e64f14771d3b0acb79bdd4c7fe9d63ee78a6e9fa1cb4b0a": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is a bottom-up DFS approach O(N) while a naive top-down approach is O(N^2)?",
+      "What return values are passed back up the call stack, and how is the base case for a null node represented?",
+      "How could you modify the return value (e.g., returning -1 for an unbalanced tree) to allow early termination without using a separate boolean flag?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "A bottom-up post-order DFS traversal computes both the balance status and height of subtrees simultaneously to avoid redundant height recalculations. By passing the balance state and current height up the call stack, each node can determine if it is balanced in O(1) time based on its immediate children.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Trees"
   },
   "4921b2f26b74736e7b05b7b9c4f69a1544baeffa068100763dc5b6c1b2aabed6": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is comparing a node only to its immediate left and right children insufficient for validating a BST?",
+      "How do the range bounds (min, max) change when recursing into a left child versus a right child?",
+      "What edge cases exist regarding duplicate node values or extreme values like infinity?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Simply checking local parent-child relations fails because deep descendant nodes must satisfy constraints imposed by all ancestor nodes above them. The solution maintains a valid numeric interval (min, max) for each node, narrowing the upper bound when moving left and the lower bound when moving right.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Trees"
   },
   "776e526fca2411edb56eb867bf386585117e54350581070cfff6ccff972785b8": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why does the fast pointer moving at twice the speed of the slow pointer guarantee collision if a cycle exists?",
+      "What boundary conditions does the loop condition `while fast and fast.next` explicitly prevent?",
+      "If a cycle of length K exists, what happens to the relative distance between the slow and fast pointers during each step once both are inside the cycle?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Floyd's Cycle-Finding Algorithm uses two pointers traversing the list at different speeds (1 step vs. 2 steps). If there is a cycle, the fast pointer will enter the cycle first and gradually close the distance to the slow pointer by 1 node per step until they intersect. If there is no cycle, the fast pointer will reach a null reference at the end of the list.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Linked List"
   },
   "beefca8f373886d617624a61a89a8828fe936cc185e2e7814503eca8c7d87380": {
     "active_recall_prompts": [
@@ -426,39 +416,36 @@
   },
   "25be25e290e1ac245cdf72e8350df0e9439a1c320f31ae36ebbed85884afb6e5": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is storing `curr.next` in a temporary variable (`temp`) necessary before updating `curr.next = prev`?",
+      "At the end of the loop, why do we return `prev` instead of `curr` or `head`?",
+      "How does this iterative implementation naturally handle edge cases such as an empty list (`head = None`) or a single-node list?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The algorithm reverses a linked list in-place by maintaining a `prev` pointer to keep track of the processed reversed tail and a `curr` pointer for traversal. At each step, we temporarily store `curr.next` to avoid losing the rest of the list, redirect `curr.next` to point to `prev`, and advance both pointers forward.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Linked List"
   },
   "e504cfb6ddff930002f2e7bda545f339b59f553f0ae8b57e7e65b8be5411a10b": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is a max-heap preferred over a simple FIFO queue for selecting the next task to execute?",
+      "How do the max-heap and auxiliary queue work together to enforce the cooldown period of n units?",
+      "What edge case occurs when task frequencies are small compared to the cooldown n, and how does the loop handle idle time?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "To minimize total time including idle cycles, we greedily execute the task with the highest remaining frequency using a Max-Heap. Once a task is processed, it is temporarily placed into a Queue alongside the future timestamp at which its cooldown ends, ensuring it is only added back to the Max-Heap when it becomes available again.",
+    "time_complexity": "O(T)",
+    "space_complexity": "O(1)",
+    "category": "Heap / Priority Queue"
   },
   "89122fba8bef2629bcd50f8f691a0861fa0a27996837e623611681d040185993": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why does the sorted nature of the input array allow us to check for duplicates using only adjacent comparisons with the write pointer?",
+      "What invariant does the `write` pointer maintain throughout the execution of the loop?",
+      "How does the algorithm handle edge cases such as an array with all identical elements or an array with only one element?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The algorithm uses a fast/slow two-pointer approach where the `read` pointer scans every element and the `write` pointer tracks the position of the last confirmed unique element. Because the array is sorted, duplicate elements are guaranteed to be contiguous, meaning a new unique value is detected whenever `nums[read] != nums[write]`. The invariant maintained is that `nums[0...write]` always contains the first `write + 1` unique elements in their original sorted order.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Two Pointers"
   },
   "d67738dedd15a159f5bb2907f3c2c5ce886d395e8e6d20f1c23152803953bf54": {
     "active_recall_prompts": [
@@ -558,15 +545,14 @@
   },
   "3b20a4359f626601eea239c4a7caa52dbce9caa07943568e413599cb93abdaff": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is checking if len(s) != len(t) at the very start an essential optimization and guard condition?",
+      "How does using a frequency map or fixed-size array lower the time complexity compared to sorting both strings?",
+      "What edge case behavior occurs if the strings contain Unicode characters instead of just lowercase English letters, and how does a hash map handle it?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Two strings are anagrams if and only if they have the exact same length and character frequency distribution. By counting character occurrences in the first string and decrementing them using the second string, an anagram is confirmed if all frequency counts return to zero.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Arrays & Hashing"
   },
   "3ccea2699ee95e5d966c100f0d4673f06a999dce97db20feef5748be961e5326": {
     "active_recall_prompts": [
@@ -1233,15 +1219,14 @@
   },
   "1d06d8f4099cd7558751f862105d50c30109d6745b6c059ab41054921de8e2ae": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How do you handle the edge case where the target color is identical to the starting pixel's original color to prevent infinite recursion?",
+      "What boundary and cell value criteria must be checked before recursively filling a neighbor cell?",
+      "Why is un-marking nodes via backtracking (`seen.remove`) unnecessary and inefficient for a standard Flood Fill algorithm?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Flood Fill explores all 4-directionally connected pixels starting from `(sr, sc)` that share the same initial color using Depth-First Search (DFS). By changing each valid pixel's color immediately to the target color, we mutate the state to mark it as visited, effectively filling the connected component.",
+    "time_complexity": "O(M * N)",
+    "space_complexity": "O(M * N)",
+    "category": "Graphs"
   },
   "33428754386199afd393291856a520e1fdcdcbb01bc8973193988b4ee7d4d37f": {
     "active_recall_prompts": [
@@ -1845,15 +1830,14 @@
   },
   "2200497054f7cf74347170de1fa09f148788a3bcb3e377b9151c71571ecb79da": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does using a key function in Python's Timsort compare to a traditional custom comparator function in terms of evaluation efficiency?",
+      "Is Python's built-in sorting algorithm stable, and what does this mean for elements that produce identical key values?",
+      "How does passing `reverse=True` modify the comparison behavior when a key function is applied?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Python's `sort()` method allows custom ordering by applying a key function to transform each element into a comparable value prior to executing Timsort. Sorting is performed directly on these evaluated key values rather than comparing element pairs repeatedly, ensuring efficient O(N) key extractions overall.",
+    "time_complexity": "O(N log N)",
+    "space_complexity": "O(N)",
+    "category": "Sorting"
   },
   "bef1e8dd937d03449ca0a111282169d9d39313cbc406a7e2df56fb6997a52a96": {
     "active_recall_prompts": [
@@ -1893,15 +1877,14 @@
   },
   "aecf8300042524409b5b6f3f65d22d56ae2b16d7626cbfd3597195f83a7884a4": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What array index is guaranteed to store the minimum value in Python's `heapq` min-heap implementation?",
+      "What is the time complexity of pushing a new element into a binary heap of size N?",
+      "How does the 'sift-up' (percolate up) process restore the heap invariant when a new element is appended?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Python's `heapq` module maintains a binary min-heap underlying structure within a standard list, guaranteeing that `heap[0]` is always the smallest element. The `heappush` function appends the value to the end and sifts it up to preserve the min-heap invariant.",
+    "time_complexity": "O(log N)",
+    "space_complexity": "O(1)",
+    "category": "Heap / Priority Queue"
   },
   "95c2e8d54d3afa53a2774053c72fa266c9c2d1e2f20bacb9fdbf9f8d637a7b3f": {
     "active_recall_prompts": [
@@ -1941,15 +1924,14 @@
   },
   "595788ecfdd6739ee887c92cff633a1b840ad8b33d72130603af95b4fa32bf2c": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How do we ensure that land cells belonging to the same island are not recounted when iterating through the grid?",
+      "What are the base cases for the recursive DFS function in a 2D grid traversal?",
+      "How could you optimize the auxiliary space complexity of this solution without using an explicit `seen` hash set?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The solution uses Depth-First Search (DFS) to explore all connected land cells (1s) belonging to an island while accumulating its area. A tracking mechanism (here, a `seen` set) ensures each cell is visited at most once, maintaining the invariant that each component's size is calculated accurately without infinite recursion.",
+    "time_complexity": "O(R * C)",
+    "space_complexity": "O(R * C)",
+    "category": "Graphs"
   },
   "6b7617e8060a9e25377400a4ca2050709ed8de88649342fe8c0668bf33cdaeec": {
     "active_recall_prompts": [
