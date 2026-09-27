@@ -177,15 +177,14 @@
   },
   "aa59560bdecdb090041f638d15ebc738f8b0bf8b792679cfd3595c62801aa7aa": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does the script handle rate limits (429 errors) and ensure idempotency during execution?",
+      "What strategy is used to cache LLM responses and avoid redundant API calls for unchanged code files?",
+      "How does the fallback mechanism ensure deck generation completes even if the API quota is fully exhausted?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The script automates Anki flashcard generation by traversing solution files, digesting code contents, and prompting the Gemini API for algorithmic metadata. It relies on SHA-256 file hashing for persistent caching to prevent duplicate API requests and utilizes exponential backoff with sleep delays to adhere to rate limits.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "System Design"
   },
   "5a11ac4a9dafaf170b7b196457243186dec0b2eaa4e97ac6cc1cdcf12a9dbd6d": {
     "active_recall_prompts": [
@@ -760,15 +759,14 @@
   },
   "a68bf7cdba6ff4442135d89987fc54d1738a314b9c02fe00765f2a5b1bd58b69": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What order of processing (relative to the current node and its left/right children) defines an inorder traversal?",
+      "How does the recursion stack behave in the worst-case scenario (e.g., a completely skewed tree), and what is the resulting space complexity?",
+      "How would you modify this solution to perform the traversal iteratively using an explicit stack?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Inorder traversal processes nodes in Left-Node-Right order, ensuring that all nodes in a left subtree are visited before the parent node, and the parent node is visited before any nodes in its right subtree. For Binary Search Trees, this traversal order visits values in sorted order. The recursive state maintains the path back to ancestor nodes using the implicit call stack.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Trees"
   },
   "5c728c2725785210d7b7349af19313fb0b91331da19d44dad46c4050a5fc4ac9": {
     "active_recall_prompts": [
@@ -1422,39 +1420,36 @@
   },
   "4955dae07a60024de65c0fc674b6d3f5d39fd6c18eb42301f9917375affac4ad": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why must matrix coordinates be represented as tuples rather than lists when inserting them into a Python set?",
+      "What is the worst-case space complexity of the stored coordinates relative to the input grid's total dimensions?",
+      "How does filtering a grid into a set of tuple coordinates optimize subsequent spatial membership lookups?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Python sets require hashable, immutable data types for their elements, making fixed-size tuples like `(row, col)` the ideal structure for storing 2D coordinates. Traversing the grid yields a sparse set representation of target positions, converting matrix coordinate lookups into $O(1)$ set operations.",
+    "time_complexity": "O(R * C)",
+    "space_complexity": "O(R * C)",
+    "category": "Arrays & Hashing"
   },
   "c0842622e98fc704e4162ab4def2893f55772e9631afedf7cc3b9699bb6d6340": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does Python's built-in sorted() function differ from the list.sort() method regarding side effects and memory usage?",
+      "How does passing key=abs with reverse=True alter the standard numerical comparison in Timsort?",
+      "If two elements in the input list have identical absolute values (e.g., -5 and 5), how does Python's sorting stability handle their relative order?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Python's `sorted()` function creates and returns a new list containing all items from the iterable in ascending order by default, leaving the original sequence unchanged. By providing a `key` transformation function (such as `abs`) and setting `reverse=True`, we can sort elements by specific derived properties in descending order while maintaining stability.",
+    "time_complexity": "O(N log N)",
+    "space_complexity": "O(N)",
+    "category": "Sorting"
   },
   "17c90ab41013967278da9854ca80320f918af19ba2fd916cf37c3138105055a4": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How can Python's built-in `heapq` (which is natively a min-heap) be adapted to function as a max-heap?",
+      "What edge case or issue can occur if tuple elements used for secondary tie-breaking in a custom heap cannot be compared?",
+      "How does the time complexity of building the initial heap using `heapq.heapify()` compare to pushing elements one by one in a loop?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Python's `heapq` module natively implements a min-heap. To invert the priority and achieve max-heap behavior, values are negated upon insertion so that larger original values become the smallest negative numbers and are popped first.",
+    "time_complexity": "O(N log N)",
+    "space_complexity": "O(N)",
+    "category": "Heap / Priority Queue"
   },
   "8388631ccc294a5f9a5a13a8b20ef329b1176aa49a8ca345b8195fd8a2405f79": {
     "active_recall_prompts": [
@@ -1518,15 +1513,14 @@
   },
   "c8d3b6a0366bb0588f4f63da3428cd9c6a2f8b7bc093a6d077ee191003384538": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is using `while val in arr1:` followed by `arr1.remove(val)` computationally expensive for large lists?",
+      "How does `arr1.extend(arr2)` differ in time and space complexity compared to creating a new list with `arr1 + arr2`?",
+      "How could you optimize `remove_elements` to run in O(N + M) time using a different data structure?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Dynamic arrays (Python `list`) support in-place extension and element removal. Concatenation is efficiently done via `.extend()`, while element deletion uses `.remove()` which shifts subsequent elements to fill the created gap.",
+    "time_complexity": "O(M * N^2)",
+    "space_complexity": "O(1)",
+    "category": "Arrays & Hashing"
   },
   "c568321e305c4c685436f03b70e593d0a1dbe786b4eb871f0c7ee5c9983e6bfb": {
     "active_recall_prompts": [
@@ -1602,27 +1596,25 @@
   },
   "e354e444b88089974998a8c4747b75e81c1587a156272df8eac05d5de36da2f2": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does `Counter.update()` differ in behavior from a standard Python dictionary's `.update()` method?",
+      "What are the time and space complexities when building and merging character frequency maps for two strings of lengths N and M?",
+      "What edge cases might arise if one or both input strings are empty, or contain unicode/multibyte characters?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The `Counter` class from Python's `collections` module acts as a hash map specialized for frequency counting. Constructing `Counter(s1)` counts character occurrences in the first string, and calling `.update(s2)` adds the frequencies from the second string directly to the existing counts rather than overwriting them.",
+    "time_complexity": "O(N + M)",
+    "space_complexity": "O(N + M)",
+    "category": "Arrays & Hashing"
   },
   "47e2326572325b9011bd241e62a3364e7c566b8b545c386a2bafe0a7e05ca3a6": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does using a double-ended queue (`deque`) optimize moving the front element to the back compared to a standard Python `list`?",
+      "How could the time complexity of this algorithm be optimized if $k$ is significantly larger than the length of the array $N$?",
+      "Which built-in method in Python's `collections.deque` natively performs queue rotation efficiently?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "A double-ended queue (`deque`) enables $O(1)$ time complexity for both removing elements from the front and inserting elements at the back. By repeatedly popping the left-most element and appending it to the end $k$ times, the elements are rotated in a FIFO manner.",
+    "time_complexity": "O(N + k)",
+    "space_complexity": "O(N)",
+    "category": "Stack"
   },
   "55773ea01824023e627c5ef729e37b687c9b2533c94d48fce1e1f562c91ee0c8": {
     "active_recall_prompts": [
@@ -1638,39 +1630,36 @@
   },
   "fef4c7920362a04adae8edfdd7d1a9aad3b7c5bdc8ba015d06f3dc547bfd71b2": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why does using `<=` instead of `<` when checking upper bounds against grid dimensions result in an index out of bounds error in 0-indexed arrays?",
+      "What are the four boundary conditions required to ensure a cell (r, c) is strictly inside a 2D grid?",
+      "How should grid boundary checks handle edge cases such as an empty grid where `len(grid)` or `len(grid[0])` is zero?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Validating coordinates in a 2D grid involves checking that both row and column indices are non-negative and strictly less than the total row and column counts. This constant-time check serves as the foundational guard condition for matrix algorithms like DFS, BFS, and matrix traversals.",
+    "time_complexity": "O(1)",
+    "space_complexity": "O(1)",
+    "category": "2D Array"
   },
   "12d9e5d866d8b861aec3ab034e37fc5b8e69c020651bf396ab5a0cd23a857c32": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What are the lower and upper index bounds required for a 0-indexed coordinate (r, c) to be valid in a 2D grid?",
+      "Why is boundary validation a critical invariant prior to performing array lookups like grid[r][c] during grid traversals?",
+      "What edge case scenario arises if the input grid is empty (e.g., [] or [[]]), and how does it affect fetching grid dimensions?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Boundary checking verifies whether a given coordinate $(r, c)$ falls within the valid row and column dimensions of a 2D matrix. It enforces the invariant $0 \\le r < \\text{rows}$ and $0 \\le c < \\text{cols}$ to prevent out-of-bounds index errors during grid operations like BFS or DFS.",
+    "time_complexity": "O(1)",
+    "space_complexity": "O(1)",
+    "category": "2D Array"
   },
   "2593db80b84a3ef80b1e0d1b6e283526b8ad198a8afbc3c256bda5c1ec6e9383": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Does using the '+' operator for list concatenation modify the input lists in-place or create a new list object?",
+      "What is the time complexity of concatenating two lists of size N and M in Python?",
+      "How does the memory allocation of 'arr1 + arr2' differ from using 'arr1.extend(arr2)'?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The solution uses Python's built-in '+' operator to combine two lists sequentially into a completely new list object. This operation preserves the original input arrays while copying references of all elements from both arrays into the new combined structure.",
+    "time_complexity": "O(N + M)",
+    "space_complexity": "O(N + M)",
+    "category": "Arrays & Hashing"
   },
   "7c62abc54f354d362f8fa71ab7c14f710c9d5c477e40463eb6995b9451f5ae06": {
     "active_recall_prompts": [
@@ -1686,27 +1675,25 @@
   },
   "15819c73aa1217dcb9faa619b6217c1a7a25dd845ec47f24da72ab0807cb9749": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What is the time complexity of `heapq.heapify()` and how does its bottom-up construction achieve this compared to inserting elements one by one?",
+      "In array-based binary heap representations, what formula relates a parent node at index `i` to its left and right children?",
+      "How does `heap_sort` use the min-heap property to guarantee elements are extracted in non-decreasing order?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Python's `heapq.heapify` transforms an array into a min-heap in-place in linear time using a bottom-up sift-down algorithm. By repeatedly extracting the minimum element using `heapq.heappop`, we maintain the invariant that each popped element is the smallest remaining value, effectively sorting the list.",
+    "time_complexity": "O(N log N)",
+    "space_complexity": "O(N)",
+    "category": "Heap / Priority Queue"
   },
   "0a35ba7532cfdbfa3ad298c7589fa0ca73f9975b47291410f004a86bad6116be": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does `discard()` differ from `remove()` in Python's `SortedSet`, and why is it safer when handling potentially missing values?",
+      "What is the time complexity of popping the smallest element (`pop(0)`) from a `SortedSet` versus popping from the front of a standard Python `list`?",
+      "What edge case occurs if the total count of unique elements remaining in the `SortedSet` is strictly less than 3 after all additions and discards?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "A `SortedSet` maintains elements in a sorted, unique state using underlying balanced data structures, allowing $O(\\log N)$ insertions, removals, and index-based popping. By adding elements from `nums1` and safely discarding elements present in `nums2`, the set continuously maintains its invariant, allowing simple retrieval of the smallest remaining elements via `pop(0)`.",
+    "time_complexity": "O((M_1 + M_2) \\log N)",
+    "space_complexity": "O(N)",
+    "category": "Heap / Priority Queue"
   },
   "ec4552e6ce50841e354a1a4a516e1646de307ad0d0428d06e691b3242eb02e67": {
     "active_recall_prompts": [
@@ -1734,15 +1721,14 @@
   },
   "069b394ccf774034d2b117609289ea8351bebb9341a0ab8bab07e8b2b8090a41": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What is the time complexity of pushing/popping from both ends of a Python `collections.deque` compared to a standard `list`?",
+      "How could this algorithm be optimized if `k` is significantly larger than the length of the input array `N`?",
+      "How would the operations change if the problem requested a left rotation instead of a right rotation?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "A double-ended queue (deque) enables $O(1)$ operations at both ends, making it ideal for cyclic shifts. By popping from the right end and pushing to the left front $k$ times, elements are shifted rightward while preserving the relative ordering of all items.",
+    "time_complexity": "O(N + K)",
+    "space_complexity": "O(N)",
+    "category": "Queue"
   },
   "98d6d8e26e12e1b86c52e33f67f320b8cf0cef26f1effe99b8fd053c2f640fdb": {
     "active_recall_prompts": [
@@ -1782,27 +1768,25 @@
   },
   "2353ad8251ba12c01b31d9261e64f5afb787d9440f3e55930194af723193c60b": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What underlying sorting algorithm powers Python's list `.sort()` method, and what are its best and worst-case time complexities?",
+      "What is the key difference in space complexity and side effects between `list.sort(reverse=True)` and `sorted(list, reverse=True)`?",
+      "How does Python's descending sort handle edge cases such as duplicate elements, mixed string casing, or `float('nan')` values?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Python's built-in sorting uses Timsort, a hybrid stable algorithm combining merge sort and insertion sort. Supplying the `reverse=True` parameter inverts the comparison logic to order elements from largest to smallest in-place.",
+    "time_complexity": "O(N log N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "2a3f0f7c7f2411d5d325d975c59905568993bf33e6db5490b64e3e9048aa5346": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does Python's `key` parameter in sorting functions evaluate elements without modifying the underlying list items?",
+      "Is Python's built-in `Timsort` stable, and what does stability mean when sorting elements with identical custom keys (e.g., `abs(-2)` and `abs(2)`)?",
+      "What are the time and space complexity characteristics of Python's `.sort()` method?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Python's `.sort()` method allows custom ordering by passing a `lambda` function to the `key` parameter, transforming each element into a proxy value used for comparisons. Because Python uses Timsort, the sort is stable, preserving the original relative order of elements that produce identical key values.",
+    "time_complexity": "O(N log N)",
+    "space_complexity": "O(N)",
+    "category": "Sorting"
   },
   "d745c09dbac48560945c264ce281830125f5dbf06250cf250e728b9cfb8f0bb9": {
     "active_recall_prompts": [
@@ -1818,15 +1802,14 @@
   },
   "6d08178f232c65db2f2c1c1139a4b1625b282dbba282c8b6248955ce42a043da": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does `defaultdict` eliminate the need for key-existence checks compared to a standard Python dictionary?",
+      "What are the default factory types used for key-value counting versus grouping elements into lists?",
+      "How does slicing `num[1:]` behave when a sublist contains only one element, and what impact does it have on the dictionary value?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "`defaultdict` simplifies frequency counting and grouping operations by automatically invoking a factory function (like `int` or `list`) to supply a default value when a missing key is accessed. This invariant eliminates explicit `if key not in dict` initialization logic, streamlining hash map operations.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "2200497054f7cf74347170de1fa09f148788a3bcb3e377b9151c71571ecb79da": {
     "active_recall_prompts": [
@@ -1841,27 +1824,25 @@
   },
   "bef1e8dd937d03449ca0a111282169d9d39313cbc406a7e2df56fb6997a52a96": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does Python's dynamic array (list) resize strategy achieve amortized O(1) time complexity for append operations?",
+      "What edge case occurs in `pop_n` when `n` exceeds the number of elements in `arr`, and how is it safely handled?",
+      "Why does inserting an element at an arbitrary index using `list.insert()` take O(N) time in the worst case?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Python dynamic arrays allow fast amortized O(1) appends and pops from the end of the list. Inserting elements at arbitrary indices or popping elements repeatedly requires bounds checking and element shifting, leading to linear time complexity relative to the array length or number of operations.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Arrays & Hashing"
   },
   "f89d16ecdbdc1dec86c3a5d09d20c2036115473d2a2fedc1dfe92d732e5415ef": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Under the hood, how does Python's `heapq.nlargest(k, arr)` maintain a heap of size k to achieve optimal time complexity?",
+      "What edge case behavior occurs when `k` is greater than the total number of elements in the input list?",
+      "Why is a min-heap of size k used instead of a max-heap of size N when searching for the k largest elements in an unsorted array?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Python's `heapq.nlargest(k, arr)` uses a min-heap of size `k` to keep track of the largest elements seen so far while scanning through the array. Any element larger than the min-heap's root replaces the root, guaranteeing that only the `k` largest values remain. Because `nlargest` returns elements in descending order, reversing the list converts the result into ascending order.",
+    "time_complexity": "O(N log k)",
+    "space_complexity": "O(k)",
+    "category": "Heap / Priority Queue"
   },
   "fe727942f1d04fd364d2dfa89cf9c1207900e7421d8b9b0fee7ccf2900ac4e8c": {
     "active_recall_prompts": [
