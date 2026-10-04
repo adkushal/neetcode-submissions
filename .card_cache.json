@@ -794,15 +794,14 @@
   },
   "c89f18233eef1e56067dc697bb1f172a6d1dcad5a6fbcab4ce89f99f1fcc5226": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does sorting the array enable both duplicate avoidance and the two-pointer movement logic?",
+      "Why is passing an array slice (`nums[i+1:]`) to the helper function suboptimal in terms of space complexity, and how can it be avoided?",
+      "What specific conditions must be checked after finding a valid pair in the two-pointer routine to ensure duplicate triplets are not generated?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Sorting the array transforms the 3Sum problem into a sequence of 2Sum problems on a sorted sub-array using two pointers moving inward. Unique triplets are guaranteed by skipping duplicate values both at the fixed outer loop element and during the two-pointer contraction.",
+    "time_complexity": "O(N^2)",
+    "space_complexity": "O(N)",
+    "category": "Two Pointers"
   },
   "4bb3b29cef6cf9ac7ad39eeaf27100b94b2ce12b8cd5e1c969a81b6a18628067": {
     "active_recall_prompts": [
@@ -818,15 +817,14 @@
   },
   "7357b95c3e0cdb238af5244347b4807517e734750e5ac1e0801a4c979fac25ba": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is a 26-element character count tuple preferred over sorting each string as a hash key, and how does it change the time complexity?",
+      "Why must the character count list be explicitly converted to a tuple before using it as a dictionary key in Python?",
+      "How does this algorithm correctly handle edge cases like empty strings (\"\") or inputs containing duplicate words?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Since all anagrams share the exact same character frequency counts, a fixed-size array representing counts of characters 'a' through 'z' uniquely identifies an anagram group. Converting this count array into an immutable tuple allows us to use it as a canonical hash key in a dictionary to group matching strings in linear time per character.",
+    "time_complexity": "O(N * K)",
+    "space_complexity": "O(N * K)",
+    "category": "Arrays & Hashing"
   },
   "36d17bc1a0de9fbbb88a4399e9ef181ab6988c1001fe3045f0b1d405d406c90e": {
     "active_recall_prompts": [
@@ -1336,15 +1334,14 @@
   },
   "8954cf5ccc62b14fc80ecadf584c5c28451f9fd853b304e3b63d0b8bed2c0e6f": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why must the second operand be popped before the first operand when processing non-commutative operators like '-' and '/'?",
+      "What invariant does the stack maintain throughout the iteration over the RPN tokens?",
+      "How does integer division truncation toward zero differ from Python's floor division (`//`) for negative numbers, and how is it correctly handled?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Reverse Polish Notation places operators after their operands, eliminating the need for parentheses or operator precedence rules. A stack naturally preserves the order of evaluation by keeping track of the most recently encountered operands in LIFO order. When an operator is encountered, it pops the two most recent operands, computes the result, and pushes it back onto the stack.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Stack"
   },
   "844fce89913cbf5aca3ce2a9711105d35dc6e313fd8b05fab7e033a10fa0817c": {
     "active_recall_prompts": [
@@ -1465,15 +1462,14 @@
   },
   "1c2fa29b2aea4ad5fa5455bb01020d9eda680247539cb98a77fa21d6e6b413a0": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does using `enumerate` simplify index tracking during a linear search compared to manual index incrementing?",
+      "What minimum state variables are required to measure the distance between the first two occurrences of a target value in a single pass?",
+      "How does the algorithm handle edge cases where the target value appears zero times, exactly once, or more than twice?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The approach utilizes Python's built-in `enumerate` to track element indices seamlessly while traversing an array in a single pass. By using boolean and index state variables (`seen` and `first`), we can store the position of the first occurrence of a target number and compute the offset immediately when a second occurrence is found.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Arrays & Hashing"
   },
   "46ab1941af5ff77420230a0702edfe1b70fd67c2a44b5521dd23a0cb60d53d09": {
     "active_recall_prompts": [
@@ -1501,15 +1497,14 @@
   },
   "ac0997fdedec82d9c177ac2a5eecb8537b83a8f1399cbec1fcf519ce9cdcd787": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does Python's built-in `heapq` module natively handle heap ordering, and what trick is used to convert it into a max-heap?",
+      "What is the difference in time complexity between building a heap by calling `heappush` $N$ times versus using `heapify` on an existing list?",
+      "How would the value-inversion trick (`-num`) need to be modified if you were storing objects or tuples containing strings alongside numerical priorities?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Python's `heapq` module only supports min-heaps natively, meaning the smallest element is always at the root. By multiplying numerical values by `-1` before pushing, larger numbers become smaller negative numbers, effectively reversing the heap priority to act as a max-heap.",
+    "time_complexity": "O(N log N)",
+    "space_complexity": "O(N)",
+    "category": "Heap / Priority Queue"
   },
   "c8d3b6a0366bb0588f4f63da3428cd9c6a2f8b7bc093a6d077ee191003384538": {
     "active_recall_prompts": [
@@ -1524,39 +1519,36 @@
   },
   "c568321e305c4c685436f03b70e593d0a1dbe786b4eb871f0c7ee5c9983e6bfb": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What occurs if one of the sublists within the multi-dimensional array is empty when applying Python's `max()` function?",
+      "How does the time complexity scale relative to the total number of elements across all inner lists versus the number of outer sublists?",
+      "How can you rewrite this using a list comprehension to achieve a more concise implementation?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The algorithm processes a 2D array by treating each inner list independently and applying a standard linear scan via the `max()` built-in function. The invariant maintained is that for each sublist at index `i`, the output list at index `i` stores its maximum value.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(K)",
+    "category": "Arrays & Hashing"
   },
   "2c1b45f6bc8eda255cd8009c2696881e74c7e8da51e972ff18a1d83b48f52595": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does Python's `zip()` handle input lists of unequal lengths by default, and what is the behavior of `itertools.zip_longest`?",
+      "What occurs in the resulting dictionary if the `names` list contains duplicate string values?",
+      "How can you convert two parallel lists into a dictionary in a single line without an explicit `for` loop?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The solution uses Python's `zip()` function to pair corresponding elements from two lists simultaneously. By iterating over these element pairs, it populates a hash map (dictionary) to associate each name with its respective score.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "30329656e9226401f3147e71824ad9999ccccc072a9e467a073a0f28007da17d": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What is the average time complexity for insertion and lookup operations in a Python hash set, and what causes worst-case behavior?",
+      "How does a hash set handle duplicate entries when populating it from an input list?",
+      "Why can you not rely on element ordering or indexing when iterating through or outputting a standard Python set?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "A hash set utilizes an underlying hash table to achieve constant time O(1) average lookup and insertion operations. By hashing each element, the set automatically deduplicates incoming keys and provides instantaneous membership testing.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "5f7ba6fb0b9c36a97d7bb72efb5814801e01d74ae3b117f1d6281b5953ce9fc5": {
     "active_recall_prompts": [
@@ -1572,15 +1564,14 @@
   },
   "33e221ff633396cb67bcf7d27b7d301c33021b386fc4609b6ba6d8fa0cf24d6a": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What underlying data structure does `heapq.nsmallest(k, iterable)` use internally to maintain the $k$ smallest elements, and what is its size invariant?",
+      "How does the time complexity of `heapq.nsmallest(k, arr)` compare to sorting the entire array with `sorted(arr)[:k]` when $k \\ll N$?",
+      "What happens if $k$ is greater than or equal to the total number of elements in the input list?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "`heapq.nsmallest(k, arr)` finds the $k$ smallest elements without doing a full $O(N \\log N)$ sort of the input list. It operates by maintaining a max-heap of size $k$ as it iterates through the $N$ elements, automatically guaranteeing that elements are returned in ascending order. To obtain descending order, reversing the resulting $k$-element list suffices.",
+    "time_complexity": "O(N log K)",
+    "space_complexity": "O(K)",
+    "category": "Heap / Priority Queue"
   },
   "be254373b9da41cdf6d18cac1e1864e12340c3948526c7733cf387dab0cd8d9a": {
     "active_recall_prompts": [
@@ -1618,15 +1609,14 @@
   },
   "55773ea01824023e627c5ef729e37b687c9b2533c94d48fce1e1f562c91ee0c8": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How can Python's built-in `max()` function replace explicit `if-else` branching when clamping a value to a lower bound?",
+      "How does `max_difference` maintain its state invariant while finding the maximum difference between consecutive elements in a single pass?",
+      "What edge case occurs in `max_difference` if the input array contains fewer than 2 elements?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Built-in functions like `max()` can replace conditional `if` statements to enforce lower bounds or track dynamic extrema concisely. By iterating through adjacent array elements and updating the maximum difference at each step, the algorithm finds the largest consecutive increase in a single linear pass.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Arrays & Hashing"
   },
   "fef4c7920362a04adae8edfdd7d1a9aad3b7c5bdc8ba015d06f3dc547bfd71b2": {
     "active_recall_prompts": [
@@ -1697,15 +1687,14 @@
   },
   "ec4552e6ce50841e354a1a4a516e1646de307ad0d0428d06e691b3242eb02e67": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What is the time complexity of looking up and deleting a key in a Python `SortedDict` versus a standard Python `dict`?",
+      "How could `get_values_before_target` be optimized to avoid iterating through the entire dict sequentially when the target is deep in the structure?",
+      "How does `get_values_before_target` behave if the `target` key is not present in `sorted_dict`?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "A `SortedDict` maintains its keys in balanced sorted order, allowing $O(\\log N)$ dynamic key lookup, insertion, and deletion. By leveraging order preservation, iterating through `sorted_dict.items()` yields keys in sorted sequence, enabling early termination once a target key is encountered.",
+    "time_complexity": "O(M log N + N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "785b845dd572e960a8ed1586e975568726ed89459a90897930fa3eb170d7040f": {
     "active_recall_prompts": [
@@ -1732,27 +1721,25 @@
   },
   "98d6d8e26e12e1b86c52e33f67f320b8cf0cef26f1effe99b8fd053c2f640fdb": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does the Last-In, First-Out (LIFO) property of a stack inherently reverse the order of elements?",
+      "What side effect does this implementation have on the original `arr` parameter, and how might that affect callers?",
+      "How would the time complexity be impacted if `arr.pop(0)` were used instead of `arr.pop()`?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Reversing a sequence relies on the Last-In, First-Out (LIFO) nature of stacks. By popping elements from the end of the input list\u2014which takes O(1) time in Python\u2014and appending them to a new list, elements naturally land in reversed order. Note that this specific implementation mutates and empties the original input array as a side effect.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Stack"
   },
   "4d305075781444a3b59f23497592497ff1b09d8a3b6d5dcd6c1c6d9a9694a086": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does the behavior of dictionary comprehension change if `nums` contains duplicate values?",
+      "What are the time and space complexities of building a dictionary using `enumerate()` over an array of size N?",
+      "How would you modify this approach if you needed to keep the index of the *first* occurrence of duplicate elements instead of the last?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Python's dictionary comprehension combined with `enumerate()` creates a map from element values to their array indices in a single pass. If duplicate values exist, later indices overwrite earlier ones, leaving the dictionary with the final index of each value.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "72cd61bc74e41c125cc486523e350d39e8cdbbbd2fcb418ac9674fb0c6255d92": {
     "active_recall_prompts": [
@@ -1846,15 +1833,14 @@
   },
   "fe727942f1d04fd364d2dfa89cf9c1207900e7421d8b9b0fee7ccf2900ac4e8c": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What exception is raised in Python if the number of variables on the left side of an assignment does not match the length of the unpacked iterable on the right?",
+      "How can you use the extended unpacking operator (`*`) to capture remaining elements when unpacking an iterable of variable or unknown length?",
+      "What is the time and space complexity of unpacking a fixed-size sequence of length $k$ into $k$ individual variables?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Python unpacking allows assigning elements from an iterable (such as a list or tuple) directly to multiple variables in a single statement. This eliminates the need for manual index-based lookup, resulting in cleaner and more readable code.",
+    "time_complexity": "O(1)",
+    "space_complexity": "O(1)",
+    "category": "Arrays & Hashing"
   },
   "aecf8300042524409b5b6f3f65d22d56ae2b16d7626cbfd3597195f83a7884a4": {
     "active_recall_prompts": [
@@ -1869,15 +1855,14 @@
   },
   "95c2e8d54d3afa53a2774053c72fa266c9c2d1e2f20bacb9fdbf9f8d637a7b3f": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does mutating land cells ('1') to water ('0') prevent duplicate counting and infinite recursion during DFS?",
+      "What is the worst-case space complexity of the call stack for the recursive DFS approach, and under what grid configuration does it occur?",
+      "How would you adapt this solution if modifying the input grid is strictly forbidden?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Iterate through every cell in the 2D grid, and whenever an unvisited land cell ('1') is encountered, increment the island counter and launch a Graph Traversal (DFS or BFS). The core trick is to mark visited land cells by mutating them to water ('0') in-place, which ensures that each connected component of land is traversed and counted exactly once.",
+    "time_complexity": "O(M * N)",
+    "space_complexity": "O(M * N)",
+    "category": "Graphs"
   },
   "136b7165bd408933a72ab21d9a016f5587763a55ee86d53cbeaa07367d14551e": {
     "active_recall_prompts": [
