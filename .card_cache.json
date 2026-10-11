@@ -291,15 +291,14 @@
   },
   "64a7a3a31682b767dabf7e17dd2bcdbcba5d600b1f756159d3db3a1d591428eb": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What invariant does the stack maintain regarding the temperatures at the stored indices?",
+      "Why does this nested loop approach run in O(N) amortized time complexity instead of O(N^2)?",
+      "How does the algorithm implicitly handle days that never experience a warmer future temperature?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The core intuition is using a monotonic decreasing stack to keep track of unresolved past days' indices. Whenever a warmer day is encountered, it continuously pops colder days off the top of the stack and calculates their day difference.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Stack"
   },
   "74909bbf10df0a72f1c2d4fa496633e6e8916b53a8b953f42d04efb0e2130984": {
     "active_recall_prompts": [
@@ -472,15 +471,14 @@
   },
   "5aa5f39974dbd2fd762dd411cf7bb2f16bb821ef03631f1a56350154a09e7b00": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is using a dummy head node beneficial when building or merging linked lists?",
+      "What invariant guarantees that the merged list remains strictly sorted at each step during the traversal?",
+      "Instead of using additional while loops to append the remaining elements of list1 or list2, how could that logic be simplified in O(1) time?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The core strategy is to maintain pointers at the head of each sorted list and iteratively attach the smaller node to the growing result list. Using a dummy head node provides a static anchor point, eliminating special-case code for setting the initial head node. Once one list is exhausted, the remaining elements of the other list are already sorted and can be appended directly.",
+    "time_complexity": "O(N + M)",
+    "space_complexity": "O(1)",
+    "category": "Linked List"
   },
   "665324620c51a94c0c69884293d7b91ab1976733d15f4dda66e93e40e55e95e4": {
     "active_recall_prompts": [
@@ -627,27 +625,25 @@
   },
   "e6d1d0c6fd2abf3411a76b9482206239daf8f28571438afc0885560d67165936": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is it guaranteed that moving the pointer with the shorter height will never eliminate a potential maximum area container?",
+      "What loop invariant is maintained by the `left` and `right` pointers as they converge toward each other?",
+      "How does the two-pointer greedy strategy behave when `heights[left] == heights[right]`, and why does choosing either pointer to move remain correct?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The container's area is constrained by its width and its shorter height. Starting with the maximum possible width at opposite ends, the only way to potentially achieve a larger area with a reduced width is by increasing the minimum height. Thus, we greedily move the pointer corresponding to the shorter height inward at each step.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Two Pointers"
   },
   "e903e2382ec0a532e8f0a687cda54059e8b79b529445c443484100fcac773ccd": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why do we always move the pointer pointing to the shorter height inward rather than the taller height?",
+      "What loop invariant guarantees that we never bypass the optimal container during the two-pointer sweep?",
+      "How does the algorithm perform when all elements in the input array are identical or when the input array length is minimal (e.g., length 2)?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The volume of water is limited by the shorter of the two heights and the width between them. Starting at the maximum width, moving the pointer with the taller height inward would only decrease width without any chance of increasing the height limit, so we greedily move the shorter pointer inward to search for a potentially taller boundary.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Two Pointers"
   },
   "3d6959938e555b8a2be3f43501447241b30383a6d4cd2e6dfffc7e28bddbcae6": {
     "active_recall_prompts": [
@@ -687,15 +683,14 @@
   },
   "492dd9ea8f0c2c05b027c7349d17b0ddb312ca927faf1ad55356abfc32c4c46a": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why must the cars be sorted by their initial position before processing them?",
+      "What condition determines whether a car behind catches up to form a fleet with a car ahead of it?",
+      "How does the stack invariant ensure that each element left in the stack represents a distinct car fleet?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Cars closer to the target act as potential bottlenecks for faster cars starting behind them. By calculating each car's hypothetical time to reach the target and iterating relative to position, we can use a monotonic stack to merge faster trailing cars into the slower leading fleet ahead of them.",
+    "time_complexity": "O(N log N)",
+    "space_complexity": "O(N)",
+    "category": "Stack"
   },
   "df9e5e05e4c86d9222d4abab9162c2d91e5eb0863c22c57fe1b3a1b5842d8a28": {
     "active_recall_prompts": [
@@ -782,15 +777,14 @@
   },
   "54ab8564a85553b6fcd6926ba20adf3d63d2739159da452df4b322b908889b26": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why must we compare the fixed element with its previous neighbor (nums[index] == nums[index - 1]) rather than its next neighbor to skip duplicates correctly?",
+      "Why can we safely break the loop early if the outer loop's fixed value is greater than 0?",
+      "How does updating the left pointer to skip duplicates after finding a valid triplet guarantee that we don't miss or duplicate solutions?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Sorting the array allows us to fix one element and reduce the problem to two-pointer Two Sum on the remaining subarray. By incrementing or decrementing pointers based on whether the sum is below or above zero, we achieve linear scanning per fixed element, while skipping identical consecutive elements ensures strictly unique triplets.",
+    "time_complexity": "O(N^2)",
+    "space_complexity": "O(1)",
+    "category": "Two Pointers"
   },
   "c89f18233eef1e56067dc697bb1f172a6d1dcad5a6fbcab4ce89f99f1fcc5226": {
     "active_recall_prompts": [
@@ -805,15 +799,14 @@
   },
   "4bb3b29cef6cf9ac7ad39eeaf27100b94b2ce12b8cd5e1c969a81b6a18628067": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What property do all anagrams share that allows us to generate a single, deterministic hash map key to group them together?",
+      "How does this implementation handle edge cases like empty strings (\"\") or input lists containing duplicate words?",
+      "How could you modify the key generation strategy to reduce the time complexity from sorting-based to counting-based?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Since all anagrams contain the exact same frequency of characters, sorting any anagram results in the same canonical string representation. Using this sorted string as a hash map key allows us to map each unique character composition to a list of its corresponding original words. The hash map invariant ensures that words with identical sorted keys are grouped into the same bucket.",
+    "time_complexity": "O(N * K log K)",
+    "space_complexity": "O(N * K)",
+    "category": "Arrays & Hashing"
   },
   "7357b95c3e0cdb238af5244347b4807517e734750e5ac1e0801a4c979fac25ba": {
     "active_recall_prompts": [
@@ -840,15 +833,14 @@
   },
   "21df5ac07372e68911a5600788201ec72c142a5f806801227a26f7c51b6bae10": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What data structure is ideal for processing nested structures in Last-In, First-Out order, and how does it help match parentheses?",
+      "How do you handle edge cases such as encountering a closing bracket when the stack is empty or having leftover opening brackets at the end?",
+      "What invariant regarding the top of the stack must hold whenever a closing bracket is processed?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The problem requires matching nested bracket pairs, making a stack the ideal Last-In, First-Out (LIFO) data structure to track opening brackets. Each closing bracket must match the most recently seen opening bracket, which is currently at the top of the stack. If all brackets match correctly, the stack will be completely empty by the end of the string.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Stack"
   },
   "09b30c101586ed3a7e409fdc49523cf513dd6217724f905d988fc2aa8de51d63": {
     "active_recall_prompts": [
@@ -948,15 +940,14 @@
   },
   "b124f12f413e860ce37ec240a48e18bba1c1d412e9ab5e4f13fbc91f694617a8": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does the Binary Search Tree property simplify finding the LCA compared to a standard Binary Tree?",
+      "What specific condition indicates that the current node is the split point and thus the Lowest Common Ancestor?",
+      "How would the space complexity change if you converted this recursive implementation to an iterative one?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Leverage the BST property where all left subtree values are smaller and all right subtree values are larger than the root. If both target nodes are smaller than the root, traverse left; if both are larger, traverse right. The first node where $p$ and $q$ diverge (one goes left, one goes right, or one equals the current node) is the Lowest Common Ancestor.",
+    "time_complexity": "O(H)",
+    "space_complexity": "O(H)",
+    "category": "Trees"
   },
   "3f7cb300b916804b6d76127760afc033d338ed6ce8bfc0be4575ac49eef4f2f0": {
     "active_recall_prompts": [
@@ -1167,15 +1158,14 @@
   },
   "b62aab3ab998a43929207bceac9108fa71582db8d00e9e078b12ece7535f97ec": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What sliding window invariant ensures that the current substring between `left` and `right` contains no duplicate characters?",
+      "Why does shrinking the window using a `while` loop still result in an amortized O(N) time complexity?",
+      "How could you optimize the window shrinking process to avoid incrementing `left` one step at a time when a duplicate is found?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The algorithm maintains a dynamic sliding window bounded by `left` and `right` indices while storing unique characters inside a set. Whenever a duplicate character is encountered at index `right`, the `left` boundary shrinks step-by-step to evict characters until the window is duplicate-free. This maintains the key invariant that every substring defined by `[left, right]` contains only unique characters.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Sliding Window"
   },
   "cad4702cf539a024417f9e4185d4cdb650ec638554888544c17a829ac731498f": {
     "active_recall_prompts": [
@@ -1191,27 +1181,25 @@
   },
   "e096aa14388d32dd0e5374069d31d33d64ade844ecc69227e759527f1c544c52": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does the post-order depth-first search pattern allow us to calculate the height of a tree bottom-up?",
+      "What is the base case for the recursion, and what value should be returned when encountering an empty subtree?",
+      "What determines the worst-case space complexity of this recursive approach, and in what tree structure does it happen?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The height of any binary tree node is 1 plus the maximum of the heights of its left and right subtrees. Using a post-order traversal (bottom-up DFS), we compute the depths of the subtrees first and aggregate the result up to the root node.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Trees"
   },
   "555387722c7bdd129033a9391c82cf7ff9cb1e2fea171caad811a6fdddd48893": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does using a Hash Map trade off space complexity to improve time complexity compared to a brute-force approach?",
+      "What edge cases should be considered (e.g., empty array, single-element array, or arrays with all duplicate values)?",
+      "How would the algorithm change if the problem constrained space complexity to O(1) without modifying the input array?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The solution utilizes a Hash Map to achieve average O(1) lookup times for previously seen elements. By maintaining the invariant that all processed elements are stored in the hash map, any repeated element can be detected instantly during iteration.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "1d06d8f4099cd7558751f862105d50c30109d6745b6c059ab41054921de8e2ae": {
     "active_recall_prompts": [
@@ -1450,15 +1438,14 @@
   },
   "8388631ccc294a5f9a5a13a8b20ef329b1176aa49a8ca345b8195fd8a2405f79": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does using `.items()` differ from iterating over dictionary keys and performing lookups in terms of performance and readability?",
+      "What invariant does Python 3.7+ guarantee regarding the iteration order when converting dictionary items to a list?",
+      "What built-in Python operation could reduce the entire `get_dict_items` function to a single line without explicit iteration?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Iterating over a dictionary using `.items()` directly yields key-value pairs as tuples, avoiding redundant key lookups. Constructing a list from these tuples preserves the dictionary's insertion order (guaranteed in Python 3.7+).",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "1c2fa29b2aea4ad5fa5455bb01020d9eda680247539cb98a77fa21d6e6b413a0": {
     "active_recall_prompts": [
@@ -1485,15 +1472,14 @@
   },
   "b37f51661b43fa21f831dde980db5b7c45c06cc857309e3ca08a47dd42573363": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does Python evaluate chained comparison operators like `0 < len(names) <= max_length` compared to combining explicit boolean operators?",
+      "What edge cases occur when `max_length` is 0 or negative, and how does the condition handle an empty `names` list?",
+      "Why is the `len()` operation in Python guaranteed to be $O(1)$ time complexity?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The solution uses Python's chained inequality operator (`a < b <= c`) to succinctly check both lower and upper bounds of array length in a single expression. Because Python lists track their size internally, calling `len()` and evaluating the bound check runs in constant time.",
+    "time_complexity": "O(1)",
+    "space_complexity": "O(1)",
+    "category": "Arrays & Hashing"
   },
   "ac0997fdedec82d9c177ac2a5eecb8537b83a8f1399cbec1fcf519ce9cdcd787": {
     "active_recall_prompts": [
@@ -1575,15 +1561,14 @@
   },
   "be254373b9da41cdf6d18cac1e1864e12340c3948526c7733cf387dab0cd8d9a": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does creating a shallow copy (`arr.copy()`) protect the original list from side effects?",
+      "What exception is raised if `element` is not present in `arr`, and how would you handle it?",
+      "What is the time complexity of Python's `list.remove()` method, and why does it dominate the operation?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "To perform a non-mutating removal operation on a list, the function creates a shallow copy of the original array. It then modifies the newly allocated copy using Python's built-in `remove()` method, leaving the input array unchanged.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "e354e444b88089974998a8c4747b75e81c1587a156272df8eac05d5de36da2f2": {
     "active_recall_prompts": [
@@ -1653,15 +1638,14 @@
   },
   "7c62abc54f354d362f8fa71ab7c14f710c9d5c477e40463eb6995b9451f5ae06": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What happens in `build_hash_map` if the `keys` and `values` input lists have different lengths when passed into `zip()`?",
+      "How does `get_values` behave if a requested key does not exist in the hash map, and how could you safely handle missing keys?",
+      "What are the average and worst-case time complexities of hash map insertions and lookups, and what causes the worst case?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "A hash map provides key-value storage with O(1) average time complexity for both insertions and lookups. Python's `zip()` primitive pairs elements positionally from multiple iterables, enabling efficient conversion from paired key and value lists into a dictionary.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "15819c73aa1217dcb9faa619b6217c1a7a25dd845ec47f24da72ab0807cb9749": {
     "active_recall_prompts": [
@@ -1743,15 +1727,14 @@
   },
   "72cd61bc74e41c125cc486523e350d39e8cdbbbd2fcb418ac9674fb0c6255d92": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does set comprehension differ from list comprehension in terms of syntax, deduplication, and element ordering?",
+      "What is the average-case time complexity of inserting N transformed elements into a set during set comprehension?",
+      "How does input containing multiple distinct numbers that evaluate to the same transformed value affect the size of the resulting set?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Set comprehension `{transform(x) for x in iterable}` combines mapping and set creation into a single concise expression. It iterates over the input collection, applies a transformation to each element, and automatically deduplicates the results by inserting them into an unordered hash set.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "2353ad8251ba12c01b31d9261e64f5afb787d9440f3e55930194af723193c60b": {
     "active_recall_prompts": [
@@ -1777,15 +1760,14 @@
   },
   "d745c09dbac48560945c264ce281830125f5dbf06250cf250e728b9cfb8f0bb9": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does Python's `key` parameter in `.sort()` maintain stability when multiple elements produce the same key value?",
+      "What is the time and space complexity overhead introduced by evaluating key functions (like `len` or `abs`) for each element prior to sorting?",
+      "How can you extend key functions to perform multi-criteria sorting (e.g., sorting words by length descending, then alphabetically ascending) using tuples?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Python's sorting algorithms utilize a key function to transform each input element into a comparable surrogate key before performing comparisons. The core invariant is stability: elements with identical key values retain their relative original order, avoiding the need for expensive custom two-argument comparators.",
+    "time_complexity": "O(N log N)",
+    "space_complexity": "O(N)",
+    "category": "Sorting"
   },
   "6d08178f232c65db2f2c1c1139a4b1625b282dbba282c8b6248955ce42a043da": {
     "active_recall_prompts": [
