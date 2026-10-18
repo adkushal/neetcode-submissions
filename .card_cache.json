@@ -482,27 +482,25 @@
   },
   "665324620c51a94c0c69884293d7b91ab1976733d15f4dda66e93e40e55e95e4": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does using a hash map for the inorder traversal indices improve the overall time complexity from O(N^2) to O(N)?",
+      "Why must the left subtree recursion be executed before the right subtree recursion when advancing `node_index` sequentially through `preorder`?",
+      "What base case condition indicates that a subtree range is empty and recursion should terminate?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The first element in the preorder sequence represents the root of the current subtree. Looking up this root's position in the inorder traversal via a precalculated hash map splits the array into left and right subtrees. Recursively constructing the left subtree before the right subtree preserves the invariant that elements in preorder are consumed sequentially (Root -> Left -> Right).",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Trees"
   },
   "a843a5d792e134be68c4b85edec38fa134f78be2960ca7312a5bdac3de8d78bb": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is calculating the actual square root (`math.sqrt`) unnecessary when comparing point distances from the origin?",
+      "How can you optimize space complexity from O(N) to O(K) by using a Max-Heap instead of a full Min-Heap?",
+      "What is the difference in time complexity between inserting elements individually with `heappush` versus transforming the list in-place with `heapq.heapify`?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Points can be ordered by their distance from the origin using the Euclidean distance formula, though comparing squared distances ($x^2 + y^2$) avoids floating-point operations. By pushing all distances onto a Min-Heap, the $k$ smallest elements can be sequentially popped to get the $k$ closest points. A more optimal variation maintains a Max-Heap of size $k$ to prune farther points dynamically.",
+    "time_complexity": "O(N log N)",
+    "space_complexity": "O(N)",
+    "category": "Heap / Priority Queue"
   },
   "220ad77cfdaa0e5dab2aaf12754cd7f282a857434d0dbf342619d265fb787ced": {
     "active_recall_prompts": [
@@ -601,15 +599,14 @@
   },
   "6f153114028e014b2c3b7b44103199bcc626764fbeed296d3f6944cc971f3ee6": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does creating an n-node gap between the fast and slow pointers ensure that slow stops right before the target node?",
+      "What edge case arises when n is equal to the length of the list, and how is it handled in this solution?",
+      "How would using a dummy node simplify handling the edge case of deleting the head of the list?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "By advancing a fast pointer n steps ahead of a slow pointer, we maintain a fixed offset between them. When the fast pointer reaches the end of the list, the slow pointer is positioned right before the Nth node from the end, allowing for a single-pass removal of the target node.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Linked List"
   },
   "cdb96f0ae201df9301dfd7fa57f91e9c8784def70b44ef874ca5d0932b08e557": {
     "active_recall_prompts": [
@@ -718,27 +715,25 @@
   },
   "335ce514b9a5444abf0a277660a2fa45faee092704a995ff6a3e34a778a43427": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does remaining at index 'i' in the include branch allow element re-use while avoiding infinite recursion?",
+      "How can tracking a remaining 'target' parameter optimize this solution compared to recomputing sum(currset) at every step?",
+      "What base case and pruning condition prevent the backtracking tree from expanding endlessly?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The algorithm explores a decision tree where at each step you either include the current number (staying at index 'i' to allow unlimited re-use) or exclude it (moving to index 'i + 1'). By strictly moving forward in the array when skipping an element, we guarantee that generated combinations do not create duplicate permutations.",
+    "time_complexity": "O(2^(T / M))",
+    "space_complexity": "O(T / M)",
+    "category": "Backtracking"
   },
   "c99424570376a39f6307592918dbece3cff90b540e522463464960bcf452c7a9": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does passing index 'i' instead of 'i + 1' during the element inclusion step allow for unlimited reuse of numbers without generating duplicate combinations?",
+      "Why is sorting the 'nums' array beforehand an effective optimization for early pruning in the recursive tree?",
+      "What is the state invariant maintained by 'remaining', and what base cases signal when to accept or abandon a decision branch?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The algorithm uses recursive backtracking to construct combinations by making a two-way decision at each step: include the current element (remaining at the same index to allow repetition) or exclude it (moving to the next index). Sorting the array enables early pruning whenever the current candidate exceeds the remaining target, stopping unpromising branches immediately.",
+    "time_complexity": "O(2^(T / M))",
+    "space_complexity": "O(T / M)",
+    "category": "Backtracking"
   },
   "4a1a1525052e5d920fed5580d9061ed1c37159abd34f0c5094e397a13529f2fd": {
     "active_recall_prompts": [
@@ -868,15 +863,14 @@
   },
   "6e013663d14b2d91f5356774e61d60a75d17386d0235bb2dcb983ae82c852909": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why do we reset the running sum (`curSum`) to the current element when `curSum` drops below zero?",
+      "How does initializing `curSum` and `maxSum` to `nums[0]` handle edge cases like an array containing only negative numbers?",
+      "What invariant does `curSum` hold at the end of each iteration during the loop?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The core insight behind Kadane's algorithm is that a negative prefix sum can never help maximize any subsequent subarray sum. Whenever the accumulated running sum drops below zero, we discard it and reset the current sum to the current element. Maintaining a global maximum throughout this single pass ensures we capture the peak contiguous sum.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Greedy"
   },
   "e3996dc6e12e3d9ddd4030a92ebf8e7f487dd670f2ef1d1bf7953888a7088655": {
     "active_recall_prompts": [
@@ -1098,27 +1092,25 @@
   },
   "6fc0f7295c03259cb7f028713b8af62ee15742ccd04fd1b73086facab9ba198c": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is the size of the buckets array initialized to len(nums) + 1 rather than len(nums)?",
+      "How does the Bucket Sort approach achieve O(N) time complexity compared to the O(N log k) Min-Heap approach?",
+      "What invariant guarantees that elements retrieved by iterating backwards through the buckets are added in descending order of frequency?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Since the maximum possible frequency of any element is bounded by the size of the array N, we can use Bucket Sort where array indices represent frequencies. By mapping each element to a bucket at index corresponding to its count, we can iterate from the highest frequency index down to 1 to collect the top K elements in linear time.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "37f12da4c8e789922c93281efc3cf5671086c390dd56af3b2d26527d11740546": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is it guaranteed that the max index of the bucket array does not need to exceed the length of the input array?",
+      "How does this bucket sort approach achieve O(N) time complexity compared to the O(N log K) min-heap approach?",
+      "What state invariant ensures that we collect elements in strictly non-increasing order of frequency as we iterate backwards through the buckets?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "By counting frequencies with a hash map and using those frequencies as indices in a 'buckets' array, we can group numbers by how often they appear. Because the maximum possible frequency is the length of the input array, iterating through the buckets in reverse order guarantees we access the most frequent elements first in O(N) time.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "9554b3bb343bba9bc7bc80ebe3dc829ac56055e7e8f3e7d37608f6b343b05cce": {
     "active_recall_prompts": [
@@ -1238,27 +1230,25 @@
   },
   "6c9f36fc65f8e95d741f8392bcaa1feefae906508be4d349a717ceab547e65f4": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does this two-pass counting sort approach differ from the single-pass Dutch National Flag (three-pointer) algorithm?",
+      "What invariant is maintained when re-populating the 'nums' array from the frequency list?",
+      "Why is the auxiliary frequency array '[0] * 3' considered O(1) space complexity despite allocating extra memory?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Since the input contains only three distinct elements (0, 1, and 2), we can determine the final sorted array by counting the frequency of each number. A second pass then overwrites the original array with 0s, 1s, and 2s sequentially based on their counted frequencies. This achieves linear time sorting without requiring comparison-based sort algorithms.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Two Pointers"
   },
   "95a1c3dfb66e1df6b268f5f0cc3803df1899e5ceb225cad0af1dc3d07fa63838": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What property of the input array allows us to use a sliding window instead of evaluating all possible subarrays?",
+      "What invariant is maintained inside the while loop when shrinking the window from the left?",
+      "How does the algorithm handle the edge case where the sum of all elements in the array is strictly less than target?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Since all array elements are positive, expanding the right pointer strictly increases the window sum, while shrinking the left pointer strictly decreases it. We expand the window until the sum reaches or exceeds target, then repeatedly contract it from the left to find the minimum valid subarray length.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Sliding Window"
   },
   "fb3c47ca9c20e4ba41f7077807c304bbc71a212e3a5c9c39cf6269fec7f4167a": {
     "active_recall_prompts": [
@@ -1274,15 +1264,14 @@
   },
   "28a0851bc9d5a3f5d99a260d8f2b281e27a3b5657a7c0fb7bcc55c7b7a7629a2": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does the termination condition in `startsWith` differ from `search` after traversing all characters?",
+      "What is the state invariant maintained by the `isWord` boolean flag at each node?",
+      "What happens to time and space complexity if an array of size 26 is used instead of a hash map (`dict`) for `children`?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "A Trie (Prefix Tree) stores strings character-by-character in a tree structure where nodes share common prefix paths. The core invariant is that traversing down a path represents building a string, and a boolean flag (`isWord`) at a node explicitly marks whether that specific path corresponds to a complete inserted word.",
+    "time_complexity": "O(N) for insert, search, and startsWith, where N is the length of the word or prefix.",
+    "space_complexity": "O(T) total space, where T is the total number of unique characters across all inserted words.",
+    "category": "Tries"
   },
   "d3c2b3a680820afae945666830ac07e48ac69d2dc54a36671d8306464efc48d6": {
     "active_recall_prompts": [
@@ -1538,15 +1527,14 @@
   },
   "5f7ba6fb0b9c36a97d7bb72efb5814801e01d74ae3b117f1d6281b5953ce9fc5": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is using list multiplication like `[[value] * cols] * rows` problematic compared to a nested list comprehension when creating a 2D matrix?",
+      "In a nested list comprehension `[[x for inner] for outer]`, which loop controls the rows and which controls the columns?",
+      "What is the expected behavior and return value of this grid creation logic if either `rows` or `cols` is set to 0?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Nested list comprehensions construct a 2D matrix by executing an inner list comprehension for each iteration of the outer list comprehension. This guarantees that each row is instantiated as a distinct, independent list object in memory, preventing common reference-sharing bugs caused by shallow copying.",
+    "time_complexity": "O(rows * cols)",
+    "space_complexity": "O(rows * cols)",
+    "category": "Arrays & Hashing"
   },
   "33e221ff633396cb67bcf7d27b7d301c33021b386fc4609b6ba6d8fa0cf24d6a": {
     "active_recall_prompts": [
