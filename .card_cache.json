@@ -256,15 +256,14 @@
   },
   "c46df5ada094d3ee750106e46991e4b9bda0ce43f95f1eda3907b617d9dfffa4": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does the search algorithm handle the wildcard character '.' differently compared to a standard literal character search?",
+      "What is the worst-case time complexity of searching for a word consisting entirely of '.' wildcards in a Trie containing $N$ keys?",
+      "What base condition in the DFS function ensures that a search validly terminates and checks if a full word was matched?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The underlying data structure is a Trie (Prefix Tree) which efficiently stores words character by character. To handle the wildcard '.' character during a search, Depth-First Search (DFS) branches out and recursively checks all possible child nodes at the current level. The invariant maintained is that each step of the recursive search matches the remaining substring against a valid sub-Trie node.",
+    "time_complexity": "O(M) for addWord, where M is the length of the word. O(26^M) worst-case for search with '.' wildcards, where M is the length of the search string (O(M) when no wildcards are present).",
+    "space_complexity": "O(M) auxiliary stack space for search recursion, where M is the word length. O(N * M) overall space to store N words in the Trie.",
+    "category": "Tries"
   },
   "838d2c48fb8e6eec247eb568509531030b9baa1b2360b78d84025ca354f63a51": {
     "active_recall_prompts": [
@@ -279,15 +278,14 @@
   },
   "61280a0a766218093da726855465b47def663f96673b261ebe65efceb3517992": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does the search algorithm handle the wildcard character '.' versus a standard alphabetical character?",
+      "What is the worst-case time complexity of a search query when the word consists entirely of '.' wildcards?",
+      "How does using string slicing like `word[1:]` impact performance in recursive calls, and how can it be optimized?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The solution uses a Trie (Prefix Tree) to store words efficiently character by character. When searching, non-wildcard characters follow a direct child path, while wildcard characters ('.') trigger a Depth-First Search (DFS) backtracks across all valid child branches at that level.",
+    "time_complexity": "O(26^L) for search worst-case (where L is word length), O(L) for addWord",
+    "space_complexity": "O(N + L) where N is total characters stored in the Trie and L is the maximum recursion depth",
+    "category": "Tries"
   },
   "64a7a3a31682b767dabf7e17dd2bcdbcba5d600b1f756159d3db3a1d591428eb": {
     "active_recall_prompts": [
@@ -324,15 +322,14 @@
   },
   "8aa48be7988bd68062b46526f9cea9c0cd1d483c47f172d0fffabbc3ebeb9731": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What is the base case when traversing recursively to insert a new node into a BST?",
+      "How does the return value of the recursive call help in updating parent-child pointer connections?",
+      "What is the worst-case time complexity of this insertion operation, and what tree structure causes it?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The Binary Search Tree property guarantees that any value smaller than the current node belongs in the left subtree, and any larger value belongs in the right subtree. By recursively comparing the target value to the current node, we navigate down to a null spot (a leaf position) where the new node can be safely attached while maintaining the BST invariant.",
+    "time_complexity": "O(H)",
+    "space_complexity": "O(H)",
+    "category": "Trees"
   },
   "46e5105d6e97997651954566c6fe6f62a21fdd63df11345a9b1a31dd0fc51834": {
     "active_recall_prompts": [
@@ -587,15 +584,14 @@
   },
   "f989f007397c9863cc8510c61ff5425a05d3a9b9c9e90ecd64f89eb33ced5e79": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does comparing nums[read] to nums[write - 2] guarantee that no element appears more than twice in the valid prefix?",
+      "How would you generalize this two-pointer strategy if the problem allowed a maximum of k duplicates instead of 2?",
+      "Why can we safely skip checking the first two elements (indices 0 and 1) at the start of the algorithm?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Use a slow 'write' pointer to track the boundary of the valid modified array and a fast 'read' pointer to scan through all elements. By comparing the current element at 'read' with the element at 'write - 2', we ensure that no value is written to the output prefix more than twice. If `nums[read]` differs from `nums[write - 2]`, it is valid to overwrite `nums[write]` with `nums[read]` and advance `write`.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Two Pointers"
   },
   "6f153114028e014b2c3b7b44103199bcc626764fbeed296d3f6944cc971f3ee6": {
     "active_recall_prompts": [
@@ -691,27 +687,25 @@
   },
   "df9e5e05e4c86d9222d4abab9162c2d91e5eb0863c22c57fe1b3a1b5842d8a28": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why does an in-order traversal (Left, Node, Right) on a Binary Search Tree process elements in strictly ascending order?",
+      "How could you modify the recursive traversal to perform early stopping once the k-th smallest element is found?",
+      "What is the space complexity of the call stack in the worst-case (skewed tree) versus the average-case (balanced tree)?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "An in-order traversal of a Binary Search Tree visits nodes in strictly sorted order. By tracking the count of visited nodes during the traversal, the k-th node visited corresponds directly to the k-th smallest element.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(H)",
+    "category": "Trees"
   },
   "642760fa00ad013519ab5d8b6d3c3ecfbdbf134c9c80588a7b172c97099ef89f": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why does an in-order traversal of a Binary Search Tree visit node values in strictly sorted ascending order?",
+      "How does checking `if ans:` serve as an early stopping mechanism to avoid traversing the remainder of the tree?",
+      "What is the maximum recursion depth for this approach, and how does tree balance affect both time and space complexity?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "An in-order traversal (Left, Root, Right) on a Binary Search Tree visits nodes in strictly ascending order. By maintaining a running count of processed nodes during this traversal, the $k$-th processed node corresponds directly to the $k$-th smallest element. Setting an answer variable enables early termination to avoid unnecessary visits to remaining nodes.",
+    "time_complexity": "O(H + k)",
+    "space_complexity": "O(H)",
+    "category": "Trees"
   },
   "335ce514b9a5444abf0a277660a2fa45faee092704a995ff6a3e34a778a43427": {
     "active_recall_prompts": [
@@ -839,15 +833,14 @@
   },
   "09b30c101586ed3a7e409fdc49523cf513dd6217724f905d988fc2aa8de51d63": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why do we reset cur_sum to 0 when it drops below 0 instead of keeping its negative value?",
+      "How does the initialization of max_sum ensure correct behavior when all elements in the array are negative?",
+      "What is the underlying invariant maintained by cur_sum during each iteration of the loop?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Kadane's algorithm relies on the fact that any contiguous subarray with a negative running sum will only decrease the sum of any subsequent subarray. Thus, whenever the current running sum drops below zero, we discard it by resetting it to zero. We maintain a global maximum variable to capture the highest subarray sum encountered at any point.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "1D Dynamic Programming"
   },
   "8f1795be1134a839815ded2af38b4d517b5d3cb5ca3c8c9a7c4661a548a4afd8": {
     "active_recall_prompts": [
@@ -1069,15 +1062,14 @@
   },
   "817e9a2e7c2f9c51665c7c0b1dfd01917bc303ae12747e66701b28c3ba1d2c76": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is a Max-Heap preferred over re-sorting the list after every collision?",
+      "How does the implementation handle the edge case where all stones are destroyed and the heap becomes empty?",
+      "What is the maximum number of loop iterations performed, and why does each iteration take O(log N) time?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "To efficiently retrieve and destroy the two heaviest stones repeatedly, we use a Max-Heap (simulated in Python using negated values). Popping the two largest elements and pushing their absolute difference back into the heap ensures we continuously shrink the collection while keeping access to the heaviest stones fast.",
+    "time_complexity": "O(N log N)",
+    "space_complexity": "O(N)",
+    "category": "Heap / Priority Queue"
   },
   "d4c16e93fd2a08f23718a5ceae5530738bf7a123811eff7a875e4ec7ff49d8a4": {
     "active_recall_prompts": [
@@ -1114,39 +1106,36 @@
   },
   "9554b3bb343bba9bc7bc80ebe3dc829ac56055e7e8f3e7d37608f6b343b05cce": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why does the code store negative frequency values in the frequency map instead of positive counts?",
+      "How does maintaining a max-heap of all unique elements compare in efficiency to maintaining a min-heap bounded by size K?",
+      "What is the behavior of this implementation when K is equal to the number of unique elements in nums?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The algorithm counts element frequencies using a hash map and simulates a max-heap with Python's default min-heap by negating the frequency counts. By inserting all unique items into the heap and popping K times, it extracts the K most frequent elements. The invariant is that the root of the heap always holds the remaining element with the highest actual frequency.",
+    "time_complexity": "O(N + U log U)",
+    "space_complexity": "O(N)",
+    "category": "Heap / Priority Queue"
   },
   "9782e75a030f597a59347dc42783f7241285196880f43f964f32edae84fe5925": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is maintaining a min-heap of size k optimal compared to building a max-heap of all unique elements?",
+      "How does Python's heapq handle tuple comparisons when two elements have the exact same frequency, and could this cause a TypeError?",
+      "How can this problem be solved in linear O(N) time using Bucket Sort, and what is the trade-off?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Count the frequency of each element using a hash map, then maintain a min-heap of size k storing (frequency, value) pairs. As you iterate through unique elements, push to the heap and immediately evict the smallest element if the heap size exceeds k, ensuring the heap always retains the top k most frequent elements.",
+    "time_complexity": "O(N log k)",
+    "space_complexity": "O(N)",
+    "category": "Heap / Priority Queue"
   },
   "3bacaf87472469349071cd62119d2f4aedaa0c6101dd9c49ffcbc80c023fa35a": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How do fast and slow pointers help locate the split point between the first and second halves of the list?",
+      "Why must we set `slow.next = None` before reversing the second half of the linked list?",
+      "How does the merge logic handle differences between odd and even total list lengths?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The key insight is decomposing the problem into three standard linked list steps: finding the middle using fast/slow pointers, reversing the second half, and interleaving the two halves. Reversing the second half transforms the requirement of back-to-front traversal into a forward iteration from both ends in O(1) space.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Linked List"
   },
   "b62aab3ab998a43929207bceac9108fa71582db8d00e9e078b12ece7535f97ec": {
     "active_recall_prompts": [
@@ -1252,15 +1241,14 @@
   },
   "fb3c47ca9c20e4ba41f7077807c304bbc71a212e3a5c9c39cf6269fec7f4167a": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What invariant guarantees that `target` lies within the index range `[low, high]` at the start of each loop iteration?",
+      "Why is the loop condition `low <= high` rather than `low < high` for this specific implementation?",
+      "How would integer overflow potentially occur when calculating `mid` in languages like C++/Java, and how can it be avoided?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The core idea is to repeatedly divide the search space in half by comparing the middle element with the target value. By leveraging the sorted array property, we maintain the invariant that the target, if present, must reside strictly within the closed interval `[low, high]`.",
+    "time_complexity": "O(log N)",
+    "space_complexity": "O(1)",
+    "category": "Binary Search"
   },
   "28a0851bc9d5a3f5d99a260d8f2b281e27a3b5657a7c0fb7bcc55c7b7a7629a2": {
     "active_recall_prompts": [
@@ -1334,15 +1322,14 @@
   },
   "4baa6d8d5d916a02f10f7d2d4d2ccc685166aa81c822566b483e28fe19e84a15": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does computing the minimum subarray sum help in finding the maximum sum of a circular subarray?",
+      "What edge case arises when all numbers in the array are negative, and why does `total_sum - global_min` fail in that scenario?",
+      "Why is it sufficient to run standard Kadane's algorithm for max and min subarray sums in a single pass without explicitly duplicating the array?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "A circular maximum subarray sum is either non-wrapping (a standard subarray) or wrapping (the total sum minus a contiguous minimum subarray). By calculating both the global maximum subarray sum and the global minimum subarray sum using Kadane's algorithm in a single pass, the circular answer is `total_sum - global_min`. If all elements are negative, `total_sum - global_min` evaluates to 0 (an empty subarray), so we must explicitly return `global_max` instead.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Dynamic Programming"
   },
   "d669ad3f8011e9ea829ff36a8e83114d65a0e3be4d6795892a583b954f3b679f": {
     "active_recall_prompts": [
@@ -1871,14 +1858,13 @@
   },
   "6b7617e8060a9e25377400a4ca2050709ed8de88649342fe8c0668bf33cdaeec": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is a multi-source BFS initialized with all rotten oranges at time 0, rather than running independent single-source BFS traversals for each rotten orange?",
+      "How does including `good_count > 0` in the `while` loop condition prevent overcounting the elapsed time after the final fresh orange is infected?",
+      "How does the algorithm handle edge cases such as grids with zero fresh oranges initially or fresh oranges that are completely isolated by empty spaces?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The problem uses a multi-source Breadth-First Search (BFS) by initializing a queue with all starting rotten oranges simultaneously. Processing the queue level-by-level simulates the spread of rot minute-by-minute across the 2D grid. Maintaining a count of remaining fresh oranges (`good_count`) ensures early termination and provides a straightforward way to check if any fresh oranges remain unreachable at the end.",
+    "time_complexity": "O(R * C)",
+    "space_complexity": "O(R * C)",
+    "category": "Graphs"
   }
 }
