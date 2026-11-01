@@ -233,15 +233,14 @@
   },
   "55d0e6a894878e3641d7e4aaa714a8cf39463e2996c5aae157e06fea6d87e1e6": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How can you decompose the product of all elements except `nums[i]` into independent left and right subproblems?",
+      "How does this prefix-suffix array approach handle arrays containing single or multiple zeros without performing division?",
+      "How can you optimize the auxiliary space complexity from O(N) down to O(1) using a single output array and a running scalar?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The product of all elements except the element at index `i` is equal to the product of all elements to its left multiplied by the product of all elements to its right. By building a prefix product array (left side) and a suffix product array (right side), each element's total product can be computed in O(1) time without using division.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "94c8ff61df4c0c9277f67298e715fd0ea79709fd61e2c9e6f62d72b7fe17dfba": {
     "active_recall_prompts": [
@@ -444,15 +443,14 @@
   },
   "d67738dedd15a159f5bb2907f3c2c5ce886d395e8e6d20f1c23152803953bf54": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why can we safely overwrite elements at the write pointer without losing unread data in the array?",
+      "What loop invariant is maintained by the write pointer relative to the elements up to index write - 1?",
+      "How would the condition check change if the problem allowed each unique element to appear at most twice instead of once?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Because the array is already sorted, duplicate elements are guaranteed to be adjacent. We use a fast read pointer to scan every element and a slow write pointer to build the compressed sub-array of unique elements in-place.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Two Pointers"
   },
   "07c04d4d7e0c3fdbc5005df01aece8b8a2da912e1ec17cce57266a3b883e8967": {
     "active_recall_prompts": [
@@ -501,15 +499,14 @@
   },
   "220ad77cfdaa0e5dab2aaf12754cd7f282a857434d0dbf342619d265fb787ced": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How can you map a 1D binary search index `mid` directly to 2D matrix coordinates `(row, col)` to perform the search in a single pass instead of two separate searches?",
+      "What bounds condition determines whether the target could potentially exist within the range of a specific row during the initial row binary search?",
+      "How does this two-step binary search handle edge cases where the target is smaller than `matrix[0][0]` or larger than `matrix[-1][-1]`?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Because the first integer of each row is greater than the last integer of the previous row, the 2D matrix can be treated as a single continuously sorted array. The algorithm uses binary search first to isolate the single row where the target could reside by comparing `target` to row boundary limits, followed by a standard binary search within that target row.",
+    "time_complexity": "O(log(M * N))",
+    "space_complexity": "O(1)",
+    "category": "Binary Search"
   },
   "bca26ad46f8be6f193babaf9c9d0976dad8bc58f04e05cb7ec1af3dce62a1b5f": {
     "active_recall_prompts": [
@@ -560,15 +557,14 @@
   },
   "c3519e5ac868e5f3559f9596aec60e88eda1ca9a00a2ae9159890aa4fdbb486f": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does encoding null pointers with a sentinel value (e.g., -101) prevent structural mismatches between trees with identical node values?",
+      "Why does matching a post-order traversal (left, right, root) with a reverse post-order traversal (root, right, left) using a LIFO stack accurately verify tree equality?",
+      "What edge case could break this specific implementation if node values fall outside the expected standard LeetCode constraints?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The algorithm serializes the first tree into a stack using post-order traversal while explicitly marking null leaf positions. It then consumes the stack in reverse post-order traversal on the second tree, validating that values and null markers match symmetrically. If all nodes and null markers match exactly, the trees are identical.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Trees"
   },
   "1ada4cbf627c332baaa890647b3f08d47a17c22b339771689692a68d7b384231": {
     "active_recall_prompts": [
@@ -606,15 +602,14 @@
   },
   "cdb96f0ae201df9301dfd7fa57f91e9c8784def70b44ef874ca5d0932b08e557": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is sorting the input candidates array essential before initiating the backtracking process?",
+      "How does the code ensure duplicate combinations are avoided when the input contains repeated elements?",
+      "What base case allows us to prune a recursive branch early to optimize execution time?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Sorting the array allows early pruning when an element exceeds the remaining sum, and groups identical elements together. By skipping all identical adjacent elements when choosing to exclude the current candidate, the algorithm guarantees that identical recursive branches are not explored twice, avoiding duplicate combinations.",
+    "time_complexity": "O(2^N)",
+    "space_complexity": "O(N)",
+    "category": "Backtracking"
   },
   "e6d1d0c6fd2abf3411a76b9482206239daf8f28571438afc0885560d67165936": {
     "active_recall_prompts": [
@@ -652,27 +647,25 @@
   },
   "f0d04a90f027c6b6260b7cc14311ed098b86d94512702641130f2e66a431d731": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is appending a sentinel value of 0 to the end of the heights array necessary for this stack-based approach?",
+      "What invariant does the stack maintain during iteration, and what condition triggers an element to be popped?",
+      "How is the width of a rectangle calculated when popping an index, depending on whether the stack becomes empty or retains elements?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "By maintaining a monotonic increasing stack of indices, each bar can determine the left and right boundaries where it serves as the limiting (minimum) height. When a bar shorter than the top of the stack is encountered, elements are popped, treating the current index as the right boundary and the new stack top as the left boundary.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Stack"
   },
   "a90b7f9c0854111794f38648309146f7a05e4575bcc6789f1b369e0ea179f6d5": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is it algorithmically valid to not decrement or recompute `max_freq_char` when the left pointer moves to shrink the window?",
+      "What mathematical condition defines whether the current sliding window `[left, right]` can be made uniform using at most `k` replacements?",
+      "Why does using a hash map/dictionary for character counts result in $O(1)$ auxiliary space complexity for this problem?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The key insight is using a sliding window where the number of required replacements is calculated as `window_length - max_freq_char`. Since we only care about finding a window larger than the maximum found so far, we never need to decrement `max_freq_char` when shrinking the window.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Sliding Window"
   },
   "492dd9ea8f0c2c05b027c7349d17b0ddb312ca927faf1ad55356abfc32c4c46a": {
     "active_recall_prompts": [
@@ -891,39 +884,36 @@
   },
   "8acda34a21258bd15b3539cfe2bbf98a2297b6ede93de85b696b42e6b2c72827": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why must the `while` loop condition include `carry > 0` in addition to checking if `ptr1` or `ptr2` are non-null?",
+      "How does using a dummy head node simplify node insertion logic compared to building the list without one?",
+      "How are input linked lists of unequal lengths handled cleanly during the traversal step?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The algorithm simulates column-by-column addition using concurrent traversal of two linked lists alongside a carried-over integer invariant. A dummy head node eliminates edge-case checks for constructing the initial node of the result list, and the loop handles unequal list lengths by defaulting missing node values to 0.",
+    "time_complexity": "O(max(N, M))",
+    "space_complexity": "O(max(N, M))",
+    "category": "Linked List"
   },
   "b3046ba848f657a49d4636f572378e7ad37b69b1be28468f4ef21cb7e1276601": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is the prefix sum array sized to `len(nums) + 1` with `prefix[0] = 0`?",
+      "How does subtracting `prefix[left]` from `prefix[right + 1]` yield the inclusive sum from index `left` to `right`?",
+      "What are the trade-offs of using a prefix sum array if the input array were mutable instead of immutable?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "By precomputing cumulative sums in a prefix array, any contiguous subarray sum `nums[left...right]` can be computed in O(1) time using the difference `prefix[right + 1] - prefix[left]`. Padding the prefix array with a leading zero simplifies indexing and eliminates edge-case checks when `left = 0`.",
+    "time_complexity": "O(N) initialization, O(1) query",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "1763f7578f0219dbd702b3ad88f6ad8a623dee2a33b148b916ed7c87dc808a99": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is the prefix sum array initialized with size `len(nums) + 1` with a leading 0?",
+      "How does subtracting `prefix[left]` from `prefix[right + 1]` yield the inclusive sum of the subarray `nums[left...right]`?",
+      "What is the trade-off in time and space complexity when precomputing prefix sums versus calculating range sums on-the-fly?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Precompute cumulative sums such that `prefix[i]` stores the sum of all elements from `nums[0]` to `nums[i-1]`. With this precomputation, the sum of any contiguous range `nums[left...right]` (inclusive) can be computed in O(1) time using the identity `prefix[right + 1] - prefix[left]`.",
+    "time_complexity": "O(N) initialization, O(1) per query",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "b124f12f413e860ce37ec240a48e18bba1c1d412e9ab5e4f13fbc91f694617a8": {
     "active_recall_prompts": [
@@ -982,15 +972,14 @@
   },
   "899bdd1536f6aef9f6bf4ce949f7bc563842ed915ece172a54f81ce3f64b2c96": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How do you mathematically map a 2D cell coordinate (r, c) on a 9x9 board to a unique 1D index representing its 3x3 sub-grid?",
+      "Why does skipping empty '.' cells during traversal guarantee that we only validate filled values without needing to solve the full puzzle?",
+      "What state invariant must hold true for row_set, col_set, and block_set after processing each non-empty cell?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The key trick is maintaining hash sets for each of the 9 rows, 9 columns, and 9 sub-boxes to track numbers seen so far. As we iterate through the board, we map 2D cell coordinates to their corresponding 3x3 box index using the formula `(row // 3 * 3) + col // 3`, allowing single-pass validation across all Sudoku constraints.",
+    "time_complexity": "O(1)",
+    "space_complexity": "O(1)",
+    "category": "Arrays & Hashing"
   },
   "b0afd214a94f7e1f9f72bdafb3dd74ba79f37d170caeda3bbd139d9ca97c551b": {
     "active_recall_prompts": [
@@ -1027,15 +1016,14 @@
   },
   "28254333f39fc69ab28c168ed1655742cc579b17ecd47e3946a72a5ea9fee451": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does inserting the k-th element into all possible positions of each existing permutation guarantee that all valid permutations of size k are generated without duplicates?",
+      "What are the performance trade-offs of using this iterative insertion approach with list slicing/copying compared to standard DFS backtracking with element swapping?",
+      "How would this iterative approach need to be modified if the input array contained duplicate elements to avoid generating duplicate permutations?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The algorithm incrementally builds permutations by inserting each new element into every possible slot of all previously generated smaller permutations. This preserves the invariant that after processing k elements, the perms list contains all complete and unique permutations of those first k elements.",
+    "time_complexity": "O(N * N!)",
+    "space_complexity": "O(N * N!)",
+    "category": "Backtracking"
   },
   "7fce55196edb0063945d8dcfca8c2b34a53c342ca9414bfa6cc2dd309166dd25": {
     "active_recall_prompts": [
@@ -1150,15 +1138,14 @@
   },
   "cad4702cf539a024417f9e4185d4cdb650ec638554888544c17a829ac731498f": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What key invariant is maintained by the sliding window and the `unique` set at the end of each iteration of the loop?",
+      "How does the `while s[right] in unique` loop guarantee that the window becomes valid again when a duplicate character is encountered?",
+      "How could storing character indices in a Hash Map optimize the left boundary transition instead of incrementing `left` one step at a time?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The solution uses a dynamic sliding window tracked by two pointers (`left` and `right`) and a hash set to maintain unique characters within the current window. When expanding the window with the `right` pointer introduces a duplicate, the `left` pointer shrinks the window by removing characters from the set until the duplicate is removed, ensuring the window always contains only unique elements.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Sliding Window"
   },
   "e096aa14388d32dd0e5374069d31d33d64ade844ecc69227e759527f1c544c52": {
     "active_recall_prompts": [
@@ -1195,15 +1182,14 @@
   },
   "33428754386199afd393291856a520e1fdcdcbb01bc8973193988b4ee7d4d37f": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What edge case occurs when the target `color` is identical to the starting pixel's color, and how does the algorithm prevent an infinite recursion loop?",
+      "How does this DFS implementation keep track of visited cells without using an auxiliary `visited` set?",
+      "What is the worst-case call stack depth for the recursive DFS, and what matrix configuration triggers this limit?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The algorithm uses Depth-First Search (DFS) to traverse connected 4-directional neighboring pixels that share the initial pixel's color. By mutating the matrix elements to the target color directly upon visiting, the grid itself acts as a visited tracker, eliminating the need for an external hash set. However, if the new color matches the original color, this in-place tracking fails, necessitating an initial check to return early.",
+    "time_complexity": "O(M * N)",
+    "space_complexity": "O(M * N)",
+    "category": "Graphs"
   },
   "f30e5e332c949f797a36000fa6e2826da70077ec99a7ae21ae49f4f847d29471": {
     "active_recall_prompts": [
@@ -1310,15 +1296,14 @@
   },
   "844fce89913cbf5aca3ce2a9711105d35dc6e313fd8b05fab7e033a10fa0817c": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How can an array of size n+1 containing integers in the range [1, n] be interpreted as a singly linked list containing a cycle?",
+      "Why does the duplicate integer in the array necessarily represent the entry point of the detected cycle?",
+      "What mathematical relationship between the starting point, cycle entry point, and collision point guarantees that two pointers moving at speed 1 will meet at the cycle entry?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "By treating each element's value as a pointer to the next index, the array forms a linked list structure with a guaranteed cycle due to the Pigeonhole Principle. Floyd's Tortoise and Hare algorithm uses fast and slow pointers to detect a collision inside the cycle, and then advances a pointer from the start alongside the slow pointer to locate the exact entry point of the cycle, which is the duplicate number.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Two Pointers"
   },
   "4baa6d8d5d916a02f10f7d2d4d2ccc685166aa81c822566b483e28fe19e84a15": {
     "active_recall_prompts": [
@@ -1333,15 +1318,14 @@
   },
   "d669ad3f8011e9ea829ff36a8e83114d65a0e3be4d6795892a583b954f3b679f": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How do the two pointers handle non-alphanumeric characters without creating an intermediate filtered string?",
+      "What edge cases exist when a string contains only non-alphanumeric characters or is empty, and why does this code handle them correctly?",
+      "How does the pointer adjustment loop ensure that out-of-bounds errors do not occur while skipping invalid characters?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The key intuition is using two pointers starting from opposite ends of the string and moving inward to compare characters. By dynamically skipping non-alphanumeric characters in-place using continuous pointer updates, the solution avoids allocating extra memory for a cleaned string. The loop maintains the invariant that every valid character pair compared must match in lowercase form until the pointers cross.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Two Pointers"
   },
   "81a29959e29e9a3450f74a4d4a9de8b99807d9b74c05781f20bd3d1c12522bf2": {
     "active_recall_prompts": [
@@ -1357,27 +1341,25 @@
   },
   "4668e6b24e952822d036979abf5cccd761779a070938dbe9b9cbf761cafec0a7": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does the helper function `isSameTree` differ in intent and execution from the main `isSubtree` function?",
+      "What is the worst-case time complexity of this naive DFS approach, and what specific tree structure triggers it?",
+      "How are base cases handled when either `root` or `subRoot` is `None` across both functions?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The algorithm decomposes the problem into two recursive tasks: checking if two binary trees are completely identical (`isSameTree`) and traversing every node of the main tree to attempt a match (`isSubtree`). A tree `subRoot` is a valid subtree if it is identical to `root` itself, or identical to any subtree rooted at `root.left` or `root.right`.",
+    "time_complexity": "O(N * M)",
+    "space_complexity": "O(H)",
+    "category": "Trees"
   },
   "eb9b9c7c2cdaa5453e5abc9e8e66a00fb621a496449b9604aae0924ccff8ee84": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What constitutes the base cases for both the main `isSubtree` recursion and the helper `isSameTree` function?",
+      "In what scenario does this straightforward recursive implementation hit its worst-case time complexity of O(M * N)?",
+      "How could you optimize this problem to O(M + N) time complexity using tree serialization or Merkle tree hashing?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The core idea is to traverse every node in the main tree using DFS and treat each node as a potential candidate root matching `subRoot`. For each candidate node, a recursive helper function checks structural and value identity with `subRoot` simultaneously.",
+    "time_complexity": "O(M * N)",
+    "space_complexity": "O(H)",
+    "category": "Trees"
   },
   "4955dae07a60024de65c0fc674b6d3f5d39fd6c18eb42301f9917375affac4ad": {
     "active_recall_prompts": [
@@ -1835,15 +1817,14 @@
   },
   "b4b038299b1cb3773a1d0f28b1ed5803643402f3fe47d4a6d9d4936935dff90e": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is Breadth-First Search (BFS) preferred over Depth-First Search (DFS) for finding the shortest path in an unweighted grid?",
+      "What critical edge case regarding the start cell (0,0) and target cell (N-1, N-1) must be checked before running the BFS?",
+      "What performance issue arises when a cell is marked as visited upon popping from the queue rather than upon appending to it?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Since every step in the grid has an equal weight of 1, Breadth-First Search (BFS) explores paths in increasing order of length, guaranteeing that the first time the target cell is reached, it is via the shortest path. 8-directional transitions are explored while maintaining a visited set to avoid redundant processing.",
+    "time_complexity": "O(R * C)",
+    "space_complexity": "O(R * C)",
+    "category": "Graphs"
   },
   "595788ecfdd6739ee887c92cff633a1b840ad8b33d72130603af95b4fa32bf2c": {
     "active_recall_prompts": [
