@@ -210,15 +210,14 @@
   },
   "9667ba3c9904995dd1237baea9afda3487770ab2365733f9a129b8c6ce2b6ed8": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does the branching factor vary across different levels of the decision tree based on the input digits?",
+      "Why is explicit backtracking (pushing and popping from `currset`) required when using a shared mutable array across recursive frames?",
+      "What is the base case condition for stopping recursion and recording a valid combination?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Model the mapping of each digit to its corresponding characters as a multi-way decision tree where the tree depth equals the input string length. Use depth-first search with backtracking to recursively append choices to a working buffer, saving the state when the buffer length matches the input string length.",
+    "time_complexity": "O(N * 4^N)",
+    "space_complexity": "O(N)",
+    "category": "Backtracking"
   },
   "1256f5001de71460b90370faa90789088501d631df5dff605a59cd947b45a71d": {
     "active_recall_prompts": [
@@ -398,15 +397,14 @@
   },
   "beefca8f373886d617624a61a89a8828fe936cc185e2e7814503eca8c7d87380": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why do we initialize `seen_sums` with `{0: 1}` before iterating through the array?",
+      "Why does the traditional two-pointer / sliding window approach fail for this problem when the array contains negative numbers?",
+      "How does the equation `prefix_sum[j] - prefix_sum[i] == k` allow us to convert this problem into a hash map lookup problem?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The key intuition is using prefix sums to convert the contiguous subarray sum problem into a frequency lookup problem: if `prefix_sum[j] - prefix_sum[i] == k`, then the subarray between indices `i` and `j` sums to `k`. By maintaining a running total and storing the frequency of all seen prefix sums in a hash map, we can instantly count how many valid subarrays end at the current index.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "25be25e290e1ac245cdf72e8350df0e9439a1c320f31ae36ebbed85884afb6e5": {
     "active_recall_prompts": [
@@ -454,15 +452,14 @@
   },
   "07c04d4d7e0c3fdbc5005df01aece8b8a2da912e1ec17cce57266a3b883e8967": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How do you determine which half of a rotated array is guaranteed to be sorted at any given midpoint?",
+      "What specific range check allows you to decide whether to search inside the sorted half versus the unsorted half?",
+      "Why is `nums[low] <= nums[mid]` checked with `<=` instead of `<`, and what edge case does this handle?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "At least one half of a rotated sorted array is always fully sorted around any midpoint. By identifying which half is sorted, we can check if the target falls within that sorted half's bounds to prune half of the search space at each step.",
+    "time_complexity": "O(log N)",
+    "space_complexity": "O(1)",
+    "category": "Binary Search"
   },
   "5aa5f39974dbd2fd762dd411cf7bb2f16bb821ef03631f1a56350154a09e7b00": {
     "active_recall_prompts": [
@@ -510,27 +507,25 @@
   },
   "bca26ad46f8be6f193babaf9c9d0976dad8bc58f04e05cb7ec1af3dce62a1b5f": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What initial length check allows us to fail fast before doing any frequency counting?",
+      "How does deleting a hash map entry when its count reaches zero simplify the final check for anagram validity?",
+      "What alternative data structure could optimize space complexity to strictly O(1) auxiliary memory if the character set is restricted to lowercase English letters?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "An anagram requires both strings to contain the exact same characters with identical frequencies. By recording character counts of the first string in a frequency map and decrementing them while iterating through the second string, we can verify character parity. Deleting keys as their counts reach zero allows a quick final check to ensure all characters were perfectly matched.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Arrays & Hashing"
   },
   "2bdd71cda715ca72abd41745b9f6271d0a56ef25aee316991e1afb4911872a46": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How can character frequency counting be used to verify that two strings are permutations of each other?",
+      "What edge case arises if string 't' contains characters not present in 's', or if 't' is longer than 's'?",
+      "Why is removing a key from the frequency map when its count reaches zero beneficial for the final validity check?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "An anagram requires both strings to contain the exact same characters with identical frequencies. By incrementing counts for the first string and decrementing for the second string, a valid anagram will result in an empty frequency map without any missing key lookups.",
+    "time_complexity": "O(N + M)",
+    "space_complexity": "O(1)",
+    "category": "Arrays & Hashing"
   },
   "3b20a4359f626601eea239c4a7caa52dbce9caa07943568e413599cb93abdaff": {
     "active_recall_prompts": [
@@ -545,15 +540,14 @@
   },
   "3ccea2699ee95e5d966c100f0d4673f06a999dce97db20feef5748be961e5326": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What initial condition allows an early exit in O(1) time before populating the character count hash map?",
+      "How does using a single frequency hash map (incrementing for string s and decrementing for string t) maintain the invariant for validating an anagram?",
+      "How would the space complexity change if the input string consisted of arbitrary Unicode characters rather than a fixed 26-letter alphabet?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Two strings are anagrams if and only if they contain the exact same characters with identical frequencies. The algorithm counts character occurrences in the first string using a hash map, then decrements counts while iterating through the second string, deleting keys that hit zero to ensure the hash map ends up completely empty.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Arrays & Hashing"
   },
   "c3519e5ac868e5f3559f9596aec60e88eda1ca9a00a2ae9159890aa4fdbb486f": {
     "active_recall_prompts": [
@@ -635,15 +629,14 @@
   },
   "3d6959938e555b8a2be3f43501447241b30383a6d4cd2e6dfffc7e28bddbcae6": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What is the decision tree structure at each step of the recursion, and how does it determine the total number of subsets?",
+      "Why is it necessary to append a copy of `currset` (`currset.copy()`) to `subsets` instead of `currset` directly?",
+      "How would the backtracking logic need to change if the input array contained duplicate integers and required unique subsets?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "At each index in the input array, we make a binary decision: either include the current element in the sub-array or exclude it. Backtracking allows us to explore both branches recursively, using a mutable array to build subsets in place and restoring the previous state with a `pop` operation after exploring the 'included' path.",
+    "time_complexity": "O(N * 2^N)",
+    "space_complexity": "O(N)",
+    "category": "Backtracking"
   },
   "f0d04a90f027c6b6260b7cc14311ed098b86d94512702641130f2e66a431d731": {
     "active_recall_prompts": [
@@ -724,15 +717,14 @@
   },
   "4a1a1525052e5d920fed5580d9061ed1c37159abd34f0c5094e397a13529f2fd": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What specific structural condition defines a 'leaf' node, and why must the target sum check be restricted strictly to leaf nodes?",
+      "How does the algorithm handle negative node values or target sums, and does it allow for early pruning?",
+      "What is the space complexity bound for both a balanced binary tree and a completely skewed binary tree during this recursive search?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The algorithm uses a pre-order Depth-First Search (DFS) to traverse paths from the root down to the leaves, keeping track of the accumulated path sum. A path is valid only if it terminates at a true leaf node (a node with no left or right children) and the total sum matches `targetSum`. Short-circuiting (`return True`) immediately bubbles up the success signal as soon as a valid path is identified.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(H)",
+    "category": "Trees"
   },
   "a68bf7cdba6ff4442135d89987fc54d1738a314b9c02fe00765f2a5b1bd58b69": {
     "active_recall_prompts": [
@@ -747,15 +739,14 @@
   },
   "5c728c2725785210d7b7349af19313fb0b91331da19d44dad46c4050a5fc4ac9": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does using a hash map resolve forward references and potential cycles introduced by the random pointers?",
+      "What edge case occurs if head is None, and how does the helper function handle null pointers for next and random references?",
+      "How could this problem be solved with O(1) auxiliary space instead of O(N) space using list interweaving?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The core intuition is using a hash map to create a 1-to-1 mapping between original nodes and their cloned counterparts. As we traverse the list, the hash map ensures each node is instantiated exactly once, whether it is accessed via the next pointer or the random pointer.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Linked List"
   },
   "54ab8564a85553b6fcd6926ba20adf3d63d2739159da452df4b322b908889b26": {
     "active_recall_prompts": [
@@ -803,15 +794,14 @@
   },
   "36d17bc1a0de9fbbb88a4399e9ef181ab6988c1001fe3045f0b1d405d406c90e": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why can the sorted characters of a string serve as a hash map key to group anagrams?",
+      "What alternative canonical key representation reduces the time complexity per string from sorting (O(K log K)) to frequency counting (O(K))?",
+      "Why must the sorted character list be converted to a tuple before using it as a dictionary key in Python?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Anagrams contain the exact same characters with identical frequencies, which means their characters yield the exact same sequence when sorted. Using this sorted character sequence as a canonical hash map key allows us to group all anagrams into the same dictionary value bucket in constant hash lookup time.",
+    "time_complexity": "O(N * K log K)",
+    "space_complexity": "O(N * K)",
+    "category": "Arrays & Hashing"
   },
   "21df5ac07372e68911a5600788201ec72c142a5f806801227a26f7c51b6bae10": {
     "active_recall_prompts": [
@@ -837,15 +827,14 @@
   },
   "8f1795be1134a839815ded2af38b4d517b5d3cb5ca3c8c9a7c4661a548a4afd8": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does Kadane's algorithm decide whether to extend the existing contiguous subarray or start a new one at the current element?",
+      "How does this implementation correctly handle an input array containing only negative numbers?",
+      "What invariant does the `localMax` variable maintain at the end of each iteration?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The core trick is Kadane's algorithm, which uses a dynamic programming state compression technique. At each element, the local maximum subarray ending at that index is either the current element alone or the current element combined with the previous local maximum. By maintaining this running local maximum and tracking the peak value seen so far in a global maximum variable, the optimal contiguous sum is found in a single pass.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Dynamic Programming"
   },
   "6e013663d14b2d91f5356774e61d60a75d17386d0235bb2dcb983ae82c852909": {
     "active_recall_prompts": [
@@ -860,27 +849,25 @@
   },
   "e3996dc6e12e3d9ddd4030a92ebf8e7f487dd670f2ef1d1bf7953888a7088655": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What is the key condition under which we reset the running local maximum sum instead of extending the existing subarray?",
+      "Why does initializing both localMax and globalMax to nums[0] correctly handle arrays consisting entirely of negative numbers?",
+      "How can you modify Kadane's Algorithm to return the starting and ending indices of the maximum subarray rather than just its sum?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The fundamental insight of Kadane's Algorithm is that a negative prefix sum reduces the sum of any subsequent contiguous subarray, so it is optimal to discard it and start a new subarray. By calculating the local maximum ending at each index as max(num, localMax + num), we maintain the optimal state while keeping track of the overall global maximum seen so far.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "1D DP"
   },
   "0aeb8173cacce28333c7ab0a785173aa5556af360c0ba8a1320c8eac40bbb8cc": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why does a negative running sum (curSum < 0) indicate that we should discard the existing prefix and start a new subarray?",
+      "How does initializing `curSum` and `maxSum` to `nums[0]` handle edge cases such as arrays containing only negative numbers?",
+      "What state invariant does `curSum` maintain at each index during the loop iteration?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "A contiguous subarray with a negative sum will only diminish the sum of any future subarray that includes it, making it optimal to discard the accumulated sum and start a new subarray. By calculating the maximum sum of a subarray ending at each index, we can maintain a global maximum in a single pass.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Greedy"
   },
   "8acda34a21258bd15b3539cfe2bbf98a2297b6ede93de85b696b42e6b2c72827": {
     "active_recall_prompts": [
@@ -1038,15 +1025,14 @@
   },
   "92354dfbb707b7d41f02c24558117aa31e615ffe45a76334c37ab453c863347c": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does inserting the current element into every possible position of smaller sub-permutations guarantee that all unique permutations are generated?",
+      "What is the time complexity cost of using `list.insert()` and `list.copy()` inside the nested loop at each level of recursion?",
+      "How does this bottom-up recursive approach differ in memory overhead and call stack structure compared to standard swap-based backtracking?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The solution builds permutations inductively from back to front by taking all permutations of the sub-problem `nums[i+1:]` and inserting `nums[i]` at every possible position. This maintains the invariant that each step produces the complete set of permutations for the subarray starting at index `i`.",
+    "time_complexity": "O(N * N!)",
+    "space_complexity": "O(N * N!)",
+    "category": "Backtracking"
   },
   "817e9a2e7c2f9c51665c7c0b1dfd01917bc303ae12747e66701b28c3ba1d2c76": {
     "active_recall_prompts": [
@@ -1193,15 +1179,14 @@
   },
   "f30e5e332c949f797a36000fa6e2826da70077ec99a7ae21ae49f4f847d29471": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "Why is sorting the input array nums a prerequisite for this duplicate-skipping strategy?",
+      "How does skipping consecutive duplicate elements in the 'exclude' branch prevent generating duplicate subsets?",
+      "What is the maximum depth of the recursion tree and how does it determine the auxiliary space complexity?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Sorting the input array groups identical elements together, allowing duplicate subsets to be avoided during backtracking. At each step, we can either choose to include the current element or skip all consecutive identical elements when choosing to exclude it. This decision tree structure ensures that each unique combination of elements is constructed exactly once.",
+    "time_complexity": "O(N * 2^N)",
+    "space_complexity": "O(N)",
+    "category": "Backtracking"
   },
   "6c9f36fc65f8e95d741f8392bcaa1feefae906508be4d349a717ceab547e65f4": {
     "active_recall_prompts": [
@@ -1249,39 +1234,36 @@
   },
   "d3c2b3a680820afae945666830ac07e48ac69d2dc54a36671d8306464efc48d6": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What condition allows us to identify the start of a consecutive sequence and avoid redundant inner loop iterations?",
+      "Why does checking existence using a Hash Set guarantee an overall time complexity of O(N) instead of O(N^2)?",
+      "How does the algorithm handle edge cases such as empty input arrays or arrays containing duplicate values?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "By storing all numbers in a Hash Set, we can check for element existence in O(1) time. The key trick to achieving O(N) runtime is to only build a sequence when a number is identified as the sequence start (i.e., `num - 1` is not in the set), ensuring each number is visited a constant number of times.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "cbfc30d8ff1a381e9a1f9d0e4e37f367f904abeb2e495b924656cd5a54b69912": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does sorting the array simplify finding consecutive sequences, and how are duplicate values handled during the linear scan?",
+      "What edge cases exist for an empty input list or an array consisting entirely of identical elements?",
+      "While this implementation runs in O(N log N) time, how can a HashSet be used to solve this problem in true O(N) time?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Sorting the array places consecutive elements adjacent to one another, allowing sequence length to be tracked via a single linear scan while ignoring duplicate values. A local counter tracks the current sequence length and updates the maximum length whenever consecutive numbers (or identical numbers) are encountered.",
+    "time_complexity": "O(N log N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "a46e4a0933a9d60c513f72d42093b93a1284f20395a7c6b325089b549674e4c7": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How do we identify the true starting element of a consecutive sequence to avoid redundant checks?",
+      "Why does the nested `while` loop not increase the overall time complexity beyond O(N)?",
+      "How does using a Hash Set affect the handling of duplicate numbers in the input array?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "By storing all elements in a Hash Set, we enable O(1) lookups for numerical neighbors. We only initiate a sequence traversal from numbers that have no left neighbor (`x - 1 not in set`), ensuring that each sequence is built exactly once from its start. This guarantees that every element is visited at most a constant number of times, keeping the runtime strictly linear.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "8954cf5ccc62b14fc80ecadf584c5c28451f9fd853b304e3b63d0b8bed2c0e6f": {
     "active_recall_prompts": [
@@ -1329,15 +1311,14 @@
   },
   "81a29959e29e9a3450f74a4d4a9de8b99807d9b74c05781f20bd3d1c12522bf2": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does using two pointers directly on the original string achieve O(1) space complexity compared to pre-filtering the string?",
+      "How does the algorithm handle edge cases such as an empty string or a string consisting entirely of non-alphanumeric characters?",
+      "What state invariant must hold true for the two pointers (`left` and `right`) before performing a character comparison?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The two-pointer approach compares characters from both ends moving inward toward the center simultaneously. Non-alphanumeric characters are skipped dynamically, avoiding the need for extra string allocation. The key invariant is that at each comparison step, both pointers reference the outermost unprocessed alphanumeric characters.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(1)",
+    "category": "Two Pointers"
   },
   "4668e6b24e952822d036979abf5cccd761779a070938dbe9b9cbf761cafec0a7": {
     "active_recall_prompts": [
@@ -1418,15 +1399,14 @@
   },
   "46ab1941af5ff77420230a0702edfe1b70fd67c2a44b5521dd23a0cb60d53d09": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "What is the time complexity of popping a single element from a heap of size N versus popping all N elements?",
+      "Why does repeatedly popping from a min-heap yield elements in ascending order?",
+      "How would the behavior of this function change if the input array is not a valid min-heap prior to executing the function?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "A min-heap maintains the smallest element at its root (index 0). By repeatedly popping the root element using `heapq.heappop`, elements are extracted in non-decreasing order while the heap invariant is restored after each extraction.",
+    "time_complexity": "O(N log N)",
+    "space_complexity": "O(N)",
+    "category": "Heap / Priority Queue"
   },
   "b37f51661b43fa21f831dde980db5b7c45c06cc857309e3ca08a47dd42573363": {
     "active_recall_prompts": [
@@ -1639,15 +1619,14 @@
   },
   "785b845dd572e960a8ed1586e975568726ed89459a90897930fa3eb170d7040f": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does Python allocate memory when using the list multiplication syntax `[0] * size`?",
+      "What potential edge cases (e.g., negative size, out-of-bounds index) could cause runtime errors in this function?",
+      "How does pre-allocating an array of size `N` compare to building an array dynamically using `append()` in terms of memory overhead and time complexity?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "Pre-allocating a fixed-size array filled with a default scalar value allows for constant-time $O(1)$ access and modification at specific target indices. This pattern avoids dynamic array resizing overhead when the final array dimensions are known in advance.",
+    "time_complexity": "O(N)",
+    "space_complexity": "O(N)",
+    "category": "Arrays & Hashing"
   },
   "069b394ccf774034d2b117609289ea8351bebb9341a0ab8bab07e8b2b8090a41": {
     "active_recall_prompts": [
@@ -1805,15 +1784,14 @@
   },
   "136b7165bd408933a72ab21d9a016f5587763a55ee86d53cbeaa07367d14551e": {
     "active_recall_prompts": [
-      "What is the optimal data structure or pattern?",
-      "What invariant or base case must be maintained?",
-      "What are the target Time and Space complexities?"
+      "How does using an auxiliary 'seen' set compare to mutating the grid in-place in terms of space complexity?",
+      "What boundary conditions and state checks must be handled in the base case of the DFS traversal to prevent invalid memory access or redundant work?",
+      "Why does initiating a DFS traversal only when finding an unvisited '1' guarantee that each connected island is counted exactly once?"
     ],
-    "key_intuition": "Review your implementation below for key invariants and edge cases.",
-    "time_complexity": "See Implementation",
-    "space_complexity": "See Implementation",
-    "category": "Algorithms",
-    "is_fallback": true
+    "key_intuition": "The grid can be modeled as an undirected graph where connected land cells ('1's) represent a single connected component. By iterating through all grid cells and triggering a DFS traversal whenever an unvisited '1' is encountered, we visit and mark every cell within that island, incrementing our island counter exactly once per component.",
+    "time_complexity": "O(M * N)",
+    "space_complexity": "O(M * N)",
+    "category": "Graphs"
   },
   "b4b038299b1cb3773a1d0f28b1ed5803643402f3fe47d4a6d9d4936935dff90e": {
     "active_recall_prompts": [
